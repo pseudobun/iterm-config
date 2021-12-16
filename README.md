@@ -28,4 +28,4 @@ plugins=(
 ```
 
 ### Configuration in action:
-![iTerm2 Appearance]("iterm.png")
+![iTerm2 Appearance](iterm.png)
