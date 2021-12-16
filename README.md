@@ -1,20 +1,31 @@
-All files included in this folder.
+## Personal configuration for iTerm2
 
-Install PowerLine font Roboto: click on each .tiff file and click install.
+*Note that all required files are included in this folder.*
 
-Move jpro-minimal.zsh-theme into ~/.oh-my-zsh/themes/ directory.
-In ~/.zshrc file change line ZSH_THEME="" to ZSH_THEME="jpro-minimal".
+### 1. Install PowerLine font Roboto
+- Click on each `.tiff` file and click install.
 
-At the top of .zshrc file add line: neofetch.
+### 2. Move the included theme to oh-my-zsh themes director
+- `mv ./jpro-minimal.zsh-theme ~/.oh-my-zsh/themes/`
 
-Then go to: iTerm > Preferences > Profiles > Colors > Color Presets ... and
-pick Flowerish.itermcolors.
+### 3. Update .zshrc file
+- Open `~/.zshrc` file in your favorite text editor
+- Change the line `ZSH_THEME="" to ZSH_THEME="jpro-minimal"`
+- Optional:
+	If you'd like to print all data regarding your computer at the beginning of each session you can use [`neofetch`](https://github.com/dylanaraps/neofetch). Just install it with `brew install neofetch` and add the line `neofetch` at the top of `.zshrc` file.
 
-Install autocomplete: sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+### 4. Set colors
+- Open iTerm2 and go to `iTerm > Preferences > Profiles > Colors > Color Presets ...` and pick `Flowerish.itermcolors`
 
-Once that is done, add the plugin in the ~/.zshrc file's plugin list.
-
+### 5. Optional: Install autocomplete
+- Run `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+- Add the installed plugin to the list of plugins in `.zshrc` file: 
+```
 plugins=(
 	...
 	zsh-autosuggestions
 )
+```
+
+### Configuration in action:
+![iTerm2 Appearance]("iterm.png")
