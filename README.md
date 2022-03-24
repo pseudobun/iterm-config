@@ -2,7 +2,7 @@
 
 *Note that all required files are included in this folder.*
 
-### 1. Install PowerLine font Roboto
+### 1. Install PowerLine font Roboto or JetBrains Mono, which one you prefer
 - Click on each `.tiff` file and click install.
 
 ### 2. Move the included theme to oh-my-zsh themes director
