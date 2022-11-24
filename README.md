@@ -17,7 +17,11 @@
 ### 4. Set colors
 - Open iTerm2 and go to `iTerm > Preferences > Profiles > Colors > Color Presets ...` and pick `Flowerish.itermcolors`
 
-### 5. Optional: Install autocomplete
+### 5. Import key bindings and profile
+- Open iTerm2 and go to `iTerm > Preferences > Profiles > Other actions ... > Import JSON profiles ...` and pick `custom_profile.json`
+- Go to `iTerm > Preferences > Keys > Key Bindings > Presets ... > Import ...` and pick `key_bindings_config.itermkeymap`
+
+### 6. Optional: Install autocomplete
 - Run `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 - Add the installed plugin to the list of plugins in `.zshrc` file: 
 ```
