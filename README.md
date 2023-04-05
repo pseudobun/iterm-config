@@ -1,4 +1,4 @@
-## Personal configuration for iTerm2
+## Personal Workspace Configuration
 
 This repository contains configuration files and images for my personal workspace (iTerm config and desktop wallpapers). Wallpaper assets used have been downloaded from the [Ethereum's official Assets site](https://ethereum.org/en/assets/).
 
