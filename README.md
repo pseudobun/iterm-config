@@ -1,6 +1,8 @@
 ## Personal configuration for iTerm2
 
-*Note that all required files are included in this folder.*
+This repository contains configuration files and images for my personal workspace (iTerm config and desktop wallpapers). Wallpaper assets used have been downloaded from the [Ethereum's official Assets site](https://ethereum.org/en/assets/).
+
+> *Note: all required files are included in this repo.*
 
 ### 1. Install PowerLine font Roboto or JetBrains Mono, which one you prefer
 - Click on each `.tiff` file and click install.
@@ -23,7 +25,7 @@
 
 ### 6. Optional: Install autocomplete
 - Run `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-- Add the installed plugin to the list of plugins in `.zshrc` file: 
+- Add the installed plugin to the list of plugins in `.zshrc` file:
 ```
 plugins=(
 	...
