@@ -3,7 +3,7 @@
 This repository contains configuration files and images for my personal workspace (iTerm config and desktop wallpapers). Wallpaper assets used have been downloaded from [Ethereum's official Assets site](https://ethereum.org/en/assets/).
 
 ## Configuration in action:
-![iTerm2 Appearance](iterm2.png)
+![iTerm2 Appearance](showcase.png)
 
 ## fish
 I use `fish` as my default shell. Check out [their repo](https://github.com/fish-shell/fish-shell). Additionally I use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish).
