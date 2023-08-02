@@ -1,0 +1,16 @@
+separator=">"
+prefer_small_ascii=false
+key_color="cyan"
+separator_color="green"
+
+[box]
+border="plain"
+visible=true
+
+[keys]
+host=" host"
+kernel=" kernel"
+os=" os"
+packages="󰏖 packages"
+shell=" shell"
+uptime=" uptime"

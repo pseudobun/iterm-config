@@ -1,5 +1,11 @@
 {
-  "Horizontal Spacing" : 1,
+  "Link Color" : {
+    "Red Component" : 0,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.73423302173614502,
+    "Alpha Component" : 1,
+    "Green Component" : 0.35916060209274292
+  },
   "Tags" : [
 
   ],
@@ -38,20 +44,14 @@
     "Alpha Component" : 1,
     "Green Component" : 0.56862747669219971
   },
-  "Ansi 4 Color" : {
-    "Red Component" : 0.12907692044973373,
+  "Ansi 1 Color" : {
+    "Red Component" : 0.80784314870834351,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.879150390625,
+    "Blue Component" : 0.47058823704719543,
     "Alpha Component" : 1,
-    "Green Component" : 0.54359120659922278
+    "Green Component" : 0.56862747669219971
   },
-  "Ansi 5 Color" : {
-    "Red Component" : 0.88627451658248901,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.94509804248809814,
-    "Alpha Component" : 1,
-    "Green Component" : 0.7450980544090271
-  },
+  "Custom Directory" : "No",
   "Rows" : 25,
   "Default Bookmark" : "No",
   "Blend" : 0.30255887681159416,
@@ -267,6 +267,12 @@
       "Action" : 10,
       "Text" : "[1;5A"
     },
+    "0xf702-0x2a0000-0x7b" : {
+      "Version" : 1,
+      "Action" : 47,
+      "Text" : "1",
+      "Label" : ""
+    },
     "0xf702-0x220000" : {
       "Action" : 10,
       "Text" : "[1;2D"
@@ -362,6 +368,12 @@
     "0xf70e-0x20000" : {
       "Action" : 10,
       "Text" : "[23;2~"
+    },
+    "0xf703-0x2a0000-0x7c" : {
+      "Version" : 1,
+      "Action" : 46,
+      "Text" : "1",
+      "Label" : ""
     },
     "0x2e-0x200000" : {
       "Action" : 12,
@@ -523,7 +535,7 @@
     "Green Component" : 0.53333336114883423
   },
   "ASCII Ligatures" : true,
-  "Name" : "Default",
+  "Name" : "pseudobun",
   "Cursor Text Color" : {
     "Red Component" : 0.10718484967947006,
     "Color Space" : "sRGB",
@@ -546,23 +558,17 @@
     "Alpha Component" : 1,
     "Green Component" : 0.11372549086809158
   },
-  "Guid" : "78D28047-1E07-42B1-9C41-7F9741E0B072",
-  "Ansi 2 Color" : {
-    "Red Component" : 0.77647058823529413,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.89803921568627454,
-    "Alpha Component" : 1,
-    "Green Component" : 0.97254901960784312
-  },
-  "Link Color" : {
-    "Red Component" : 0,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.73423302173614502,
-    "Alpha Component" : 1,
-    "Green Component" : 0.35916060209274292
-  },
   "Transparency" : 0.15116356382978727,
-  "Custom Directory" : "No",
+  "Guid" : "78D28047-1E07-42B1-9C41-7F9741E0B072",
+  "Ansi 3 Color" : {
+    "Red Component" : 0.9843137264251709,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.83529412746429443,
+    "Alpha Component" : 1,
+    "Green Component" : 0.9686274528503418
+  },
+  "Horizontal Spacing" : 1,
+  "Right Option Key Sends" : 0,
   "Use Non-ASCII Font" : false,
   "Ansi 6 Color" : {
     "Red Component" : 0.40784314274787903,
@@ -571,20 +577,26 @@
     "Alpha Component" : 1,
     "Green Component" : 0.53333336114883423
   },
-  "Normal Font" : "JetBrainsMono-Regular 12",
-  "Ansi 3 Color" : {
-    "Red Component" : 0.9843137264251709,
+  "Normal Font" : "LigaSFMonoNerdFont-Regular 12",
+  "Ansi 2 Color" : {
+    "Red Component" : 0.77647058823529413,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.83529412746429443,
+    "Blue Component" : 0.89803921568627454,
     "Alpha Component" : 1,
-    "Green Component" : 0.9686274528503418
+    "Green Component" : 0.97254901960784312
   },
-  "Ansi 1 Color" : {
-    "Red Component" : 0.80784314870834351,
+  "Ansi 4 Color" : {
+    "Red Component" : 0.12907692044973373,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.47058823704719543,
+    "Blue Component" : 0.879150390625,
     "Alpha Component" : 1,
-    "Green Component" : 0.56862747669219971
+    "Green Component" : 0.54359120659922278
   },
-  "Right Option Key Sends" : 0
+  "Ansi 5 Color" : {
+    "Red Component" : 0.88627451658248901,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.94509804248809814,
+    "Alpha Component" : 1,
+    "Green Component" : 0.7450980544090271
+  }
 }
