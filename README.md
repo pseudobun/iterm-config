@@ -65,3 +65,8 @@ Run this command to bootstrap your machine:
 
 1. Import public key using `gpg --import public_key.asc`.
 2. Import private key using `gpg --import private_key.asc`.
+
+## Inspiration:
+- [martines3000/dotfiles](https://github.com/martines3000/dotfiles)
+- [br3ndonland/dotfiles](https://github.com/br3ndonland/dotfiles)
+- [eieioxyz/Beyond-Dotfiles-in-100-Seconds](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds)
