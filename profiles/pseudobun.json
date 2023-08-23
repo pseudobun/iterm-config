@@ -1169,7 +1169,7 @@
     "Green Component" : 0.82745098039215681
   },
   "Space" : -1,
-  "HotKey Window AutoHides" : true,
+  "HotKey Window AutoHides" : false,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
@@ -1191,7 +1191,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.53333336114883423
   },
-  "Transparency" : 0.10095578457446809,
+  "Transparency" : 0.49530418882978727,
   "HotKey Activated By Modifier" : true,
   "Background Color" : {
     "Red Component" : 0.11956787109375,
