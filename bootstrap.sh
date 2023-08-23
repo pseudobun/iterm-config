@@ -86,7 +86,7 @@ if ! grep -q "source ~/.config/fish/pseudobun.fish" ~/.config/fish/config.fish; 
 fi
 echo "Finished symlinking dotfiles."
 
-# Set up NVM
+# Install and set up up NVM
 nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh"
 echo "Install NVM from (default: $nvm_url): "
 read nvm_alt_url
@@ -96,6 +96,10 @@ fi
 
 curl -o- $nvm_url | bash
 ln -fs $dotfiles_path/nvm.fish ~/.config/fish/functions
+
+echo "Installing Rust..."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+echo "Finished installing Rust."
 
 # At the end set the remote to the ssh version
 git remote set-url origin git@github.com:pseudobun/dotfiles.git

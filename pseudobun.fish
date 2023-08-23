@@ -13,6 +13,9 @@ alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
 alias tsm='transmission-remote'
 alias watchtsm="watch --interval 1 'transmission-remote -l'"
 
+# Add to PATH
+fish_add_path ~/.cargo/bin
+
 function cs
    z $argv
    exa -ahl --icons
