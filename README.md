@@ -1,6 +1,6 @@
-# Personal Workspace Configuration
+# pseudobun's dotfiles
 
-This repository contains dotfiles and images for my personal workspace (iTerm config and desktop wallpapers). Wallpaper assets used have been downloaded from [Ethereum's official Assets site](https://ethereum.org/en/assets/).
+This repository contains dotfiles and images for my workspace (iTerm config and desktop wallpapers). Wallpaper assets used have been downloaded from [Ethereum's official Assets site](https://ethereum.org/en/assets/).
 
 ## Bootstrapping:
 
