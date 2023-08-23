@@ -58,8 +58,9 @@ else
 fi
 
 echo "Installing omf (Oh-My-Fish)..."
-# FIXME: bug here with omf install script, where if already installed it hangs
+# FIXME: omf installation in this script setup.fish is not working, hangs
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+fish ./setup.fish
 echo "Finished installing omf."
 
 # macchina config folder
@@ -80,7 +81,6 @@ if ! grep -q "source ~/.config/fish/pseudobun.fish" ~/.config/fish/config.fish; 
     echo -e "\nsource ~/.config/fish/pseudobun.fish" | sudo tee -a ~/.config/fish/config.fish
 fi
 echo "Finished symlinking dotfiles."
-fish ./setup.fish
 
 # Set up NVM
 nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh"
