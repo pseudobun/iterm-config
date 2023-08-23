@@ -105,3 +105,7 @@ echo "Finished installing Rust."
 git remote set-url origin git@github.com:pseudobun/dotfiles.git
 
 echo "Finished setting up pseudobun's dotfiles."
+
+# MacOS defaults
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
+defaults write com.apple.dock "scroll-to-open" -bool "true"
