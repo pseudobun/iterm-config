@@ -6,6 +6,7 @@ abbr -a htop 'btm'
 abbr -a top 'btm'
 abbr -a ls 'exa --icons'
 abbr -a cd 'z'
+abbr -a l 'exa -ahl --icons'
 
 alias please='sudo'
 alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
