@@ -4,7 +4,8 @@ This repository contains dotfiles and images for my personal workspace (iTerm co
 
 ## Bootstrapping:
 
-Run this command to bootstrap your machine: 
+Run this command to bootstrap your machine:
+
  `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/pseudobun/dotfiles/master/bootstrap.sh)"`
 
 > Note: 
