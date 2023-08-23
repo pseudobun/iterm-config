@@ -1,0 +1,10 @@
+[user]
+	name = Urban Vidovič
+	email = urbanfoundit@gmail.com
+	signingkey = 7A5C62926461D990A0575C9EA03490EFF21E32E9
+[commit]
+	gpgsign = true
+[credential]
+	helper = osxkeychain
+[gpg]
+	program = /opt/homebrew/bin/gpg
