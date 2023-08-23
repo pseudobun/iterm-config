@@ -6,7 +6,9 @@ This repository contains dotfiles and images for my personal workspace (iTerm co
 
 Run this command to bootstrap your machine:
 
- `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/pseudobun/dotfiles/master/bootstrap.sh)"`
+ ```
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/pseudobun/dotfiles/master/bootstrap.sh)"
+ ```
 
 > Note: 
 > Some of the commands in the script require `sudo` access. You will be prompted for your password. 
