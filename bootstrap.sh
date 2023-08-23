@@ -17,6 +17,7 @@ fi
 echo "Preparing to clone dotfiles repo..."
 echo "Enter the path where to clone the repo (default: ~/.dotfiles): "
 read dotfiles_path
+
 if [ -z "$dotfiles_path" ]; then
     dotfiles_path=~/.dotfiles
 fi
