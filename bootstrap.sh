@@ -2,7 +2,7 @@
 if ! command -v xcode-select &>/dev/null; then
     echo "Xcode CLI is not installed, do you want to install it? (y/n): "
     read xcode
-    if [ "$xcode" == "y" ] || [ -z "$xcode" ]; then
+    if [[ "$xcode" == "y" ]] || [[ -z "$xcode" ]]; then
         echo "Installing Xcode CLI..."
         xcode-select --install
         echo "Xcode CLI installed."
@@ -17,7 +17,7 @@ fi
 echo "Preparing to clone dotfiles repo..."
 echo "Enter the path where to clone the repo (default: ~/.dotfiles): "
 read dotfiles_path
-if [ -z "$dotfiles_path" ]; then
+if [[ -z "$dotfiles_path" ]]; then
     dotfiles_path=~/.dotfiles
 fi
 
