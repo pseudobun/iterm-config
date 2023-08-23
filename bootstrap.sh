@@ -59,8 +59,11 @@ fi
 
 echo "Installing omf (Oh-My-Fish)..."
 # FIXME: omf installation in this script setup.fish is not working, hangs
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-fish ./setup.fish
+echo "(EXPERIMENTAL) - Do you want to install omf (Oh-My-Fish)? (y/n): "
+read omf
+if [[ "$omf" == "y" ]] || [[ -z "$omf" ]]; then
+    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+fi
 echo "Finished installing omf."
 
 # macchina config folder
@@ -76,6 +79,7 @@ ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
 ln -fs $dotfiles_path/functions/* ~/.local/share/omf/themes/pseudobun/functions
 ln -fs $dotfiles_path/macchina/pseudobun.toml ~/.config/macchina/themes
 ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
+fish ./setup.fish
 
 if ! grep -q "source ~/.config/fish/pseudobun.fish" ~/.config/fish/config.fish; then
     echo -e "\nsource ~/.config/fish/pseudobun.fish" | sudo tee -a ~/.config/fish/config.fish
