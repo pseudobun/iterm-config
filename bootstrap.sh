@@ -73,7 +73,18 @@ mkdir -p ~/.config/fish
 # omf config folder
 mkdir -p ~/.local/share/omf/themes/pseudobun/functions
 
-# symlinking dotfiles
+# Install and set up up NVM
+nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh"
+echo "Install NVM from (default: $nvm_url): "
+read nvm_alt_url
+if [ -n "$nvm_alt_url" ]; then
+    nvm_url=$nvm_alt_url
+fi
+
+curl -o- $nvm_url | bash
+# the line below not needed anymore due to fish-nvm
+# ln -fs $dotfiles_path/nvm.fish ~/.config/fish/functions <
+
 echo "Symlinking dotfiles..."
 ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
 ln -fs $dotfiles_path/functions/* ~/.local/share/omf/themes/pseudobun/functions
@@ -85,17 +96,6 @@ if ! grep -q "source ~/.config/fish/pseudobun.fish" ~/.config/fish/config.fish; 
     echo -e "\nsource ~/.config/fish/pseudobun.fish" | sudo tee -a ~/.config/fish/config.fish
 fi
 echo "Finished symlinking dotfiles."
-
-# Install and set up up NVM
-nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh"
-echo "Install NVM from (default: $nvm_url): "
-read nvm_alt_url
-if [ -n "$nvm_alt_url" ]; then
-    nvm_url=$nvm_alt_url
-fi
-
-curl -o- $nvm_url | bash
-ln -fs $dotfiles_path/nvm.fish ~/.config/fish/functions
 
 echo "Installing Rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
