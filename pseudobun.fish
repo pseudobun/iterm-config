@@ -1,4 +1,6 @@
 set -g fish_greeting
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
 
 zoxide init fish | source
 

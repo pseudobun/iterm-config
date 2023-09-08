@@ -101,6 +101,11 @@ echo "Installing Rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "Finished installing Rust."
 
+# Experimental, we'll see if it stays here
+echo "Installing Bun..."
+curl -fsSL https://bun.sh/install | bash
+echo "Finished installing Bun."
+
 # At the end set the remote to the ssh version
 git remote set-url origin git@github.com:pseudobun/dotfiles.git
 
