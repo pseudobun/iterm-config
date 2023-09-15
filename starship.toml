@@ -3,10 +3,11 @@
 
 add_newline = true
 format = '''
-$username$hostname \[$directory\] $character
+$os$username$hostname \[$directory\]
+$character
 '''
 right_format = '''
-$git_branch $git_status $rust $package $bun $cmd_duration
+$git_branch$git_status$nodejs$bun$rust$golang$cmd_duration
 '''
 
 [character]
@@ -31,23 +32,41 @@ fish_style_pwd_dir_length = 1
 home_symbol = "~"
 
 [cmd_duration]
-min_time = 0
-format = 'took [$duration](bold yellow)'
+min_time = 1
+format = 'took [$duration](bold yellow) '
 
 [git_branch]
 symbol = ' '
-format = '[$symbol$branch(:$remote_branch)](purple bold)'
+format = '[$symbol$branch(:$remote_branch)](purple bold) '
 
 [git_status]
-format = "$ahead_behind $staged"
-ahead = '[⇡${count}](green)'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-behind = '⇣${count}'
-conflicted = 'C'
-up_to_date = '[✓](green bold)'
-stashed = '📦'
-modified = '✗'
-staged = '[++\($count\)](green)'
+format = "$ahead_behind$conflicted$stashed$deleted$renamed$modified$untracked$staged"
+conflicted = '[C](red bold) '
+ahead = '[⇡${count}](green) '
+behind = '[⇣${count}](yellow) '
+diverged = '[⇕⇡${ahead_count}](green)[⇣${behind_count}](yellow) '
+up_to_date = '[✓](green bold) '
+untracked = '[?](yellow bold) '
+stashed = ' '
+modified = '[✗](red bold) '
+staged = '[++\($count\)](green) '
+renamed = "[󰙏](cyan) "
+deleted = "[](red) "
+
+[rust]
+symbol = " "
+format = '[$symbol$version](red bold) '
+
+[golang]
+symbol = " "
+format = '[$symbol$version](bold cyan) '
+
+[nodejs]
+format = '[$symbol$version](bold yellow) '
+symbol = "󰎙 "
+
+[bun]
+format = '[🍔 $version](bold green) '
 
 [hostname]
 ssh_only = true
@@ -55,13 +74,17 @@ format = '[@](green)[$hostname](purple)'
 trim_at = '.local'
 disabled = false
 
-[bun]
-format = '[🍔 $version](bold green) '
+[os]
+format = "$symbol"
+style = "white"
+disabled = false
+[os.symbols]
+Macos = " "
 
-[battery]
-full_symbol = '🔋 '
-charging_symbol = '⚡️ '
-discharging_symbol = '💀 '
-[[battery.display]]
-threshold = 100
-style = 'bold red'
+# [battery]
+# full_symbol = '🔋 '
+# charging_symbol = '⚡️ '
+# discharging_symbol = '💀 '
+# [[battery.display]]
+# threshold = 100
+# style = 'bold red'
