@@ -1,0 +1,67 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+format = '''
+$username$hostname \[$directory\] $character
+'''
+right_format = '''
+$git_branch $git_status $rust $package $bun $cmd_duration
+'''
+
+[character]
+success_symbol = '[⋊>](cyan)'
+error_symbol = '[⋊>](bold red)'
+
+[username]
+style_user = 'cyan'
+style_root = 'red'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[directory]
+truncation_symbol = '…/'
+format = '[$path](green)'
+repo_root_style = 'green bold'
+before_repo_root_style = 'green'
+repo_root_format = '[](green) [$repo_root]($repo_root_style)[$path](green)'
+truncate_to_repo = true
+fish_style_pwd_dir_length = 1
+home_symbol = "~"
+
+[cmd_duration]
+min_time = 0
+format = 'took [$duration](bold yellow)'
+
+[git_branch]
+symbol = ' '
+format = '[$symbol$branch(:$remote_branch)](purple bold)'
+
+[git_status]
+format = "$ahead_behind $staged"
+ahead = '[⇡${count}](green)'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+conflicted = 'C'
+up_to_date = '[✓](green bold)'
+stashed = '📦'
+modified = '✗'
+staged = '[++\($count\)](green)'
+
+[hostname]
+ssh_only = true
+format = '[@](green)[$hostname](purple)'
+trim_at = '.local'
+disabled = false
+
+[bun]
+format = '[🍔 $version](bold green) '
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+[[battery.display]]
+threshold = 100
+style = 'bold red'
