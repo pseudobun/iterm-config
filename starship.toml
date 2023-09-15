@@ -6,7 +6,7 @@ format = '''
 $username$hostname \[$directory\] $character
 '''
 right_format = '''
-$git_branch$git_status$rust$package$bun$cmd_duration
+$git_branch$git_status$nodejs$bun$rust$cmd_duration
 '''
 
 [character]
@@ -39,15 +39,18 @@ symbol = ' '
 format = '[$symbol$branch(:$remote_branch)](purple bold) '
 
 [git_status]
-format = "$up_to_date$diverged$modified$staged$ahead$behind$conflicted$untracked"
-ahead = '[⇡${count}](green) '
-diverged = '[⇕⇡${ahead_count}](green)[⇣${behind_count}](yellow) '
-behind = '[⇣${count}](yellow) '
+format = "$ahead_behind$conflicted$stashed$deleted$renamed$modified$untracked$staged"
 conflicted = '[C](red bold) '
+ahead = '[⇡${count}](green) '
+behind = '[⇣${count}](yellow) '
+diverged = '[⇕⇡${ahead_count}](green)[⇣${behind_count}](yellow) '
 up_to_date = '[✓](green bold) '
+untracked = '[?](yellow bold) '
 stashed = ' '
 modified = '[✗](red bold) '
 staged = '[++\($count\)](green) '
+renamed = "[󰙏](cyan) "
+deleted = "[](red) "
 
 [rust]
 symbol = " "
@@ -55,7 +58,7 @@ format = '[$symbol$version](red bold) '
 
 
 [nodejs]
-format = 'via [🤖 $version](bold green) '
+format = '[🤖 $version](bold yellow) '
 
 
 [hostname]
