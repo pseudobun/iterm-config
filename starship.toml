@@ -3,10 +3,11 @@
 
 add_newline = true
 format = '''
-$username$hostname \[$directory\] $character
+$os$username$hostname \[$directory\]
+$character
 '''
 right_format = '''
-$git_branch$git_status$nodejs$bun$rust$cmd_duration
+$git_branch$git_status$nodejs$bun$rust$golang$cmd_duration
 '''
 
 [character]
@@ -31,8 +32,8 @@ fish_style_pwd_dir_length = 1
 home_symbol = "~"
 
 [cmd_duration]
-min_time = 0
-format = 'took [$duration](bold yellow)'
+min_time = 1
+format = 'took [$duration](bold yellow) '
 
 [git_branch]
 symbol = ' '
@@ -56,10 +57,16 @@ deleted = "[](red) "
 symbol = " "
 format = '[$symbol$version](red bold) '
 
+[golang]
+symbol = " "
+format = '[$symbol$version](bold cyan) '
 
 [nodejs]
-format = '[🤖 $version](bold yellow) '
+format = '[$symbol$version](bold yellow) '
+symbol = "󰎙 "
 
+[bun]
+format = '[🍔 $version](bold green) '
 
 [hostname]
 ssh_only = true
@@ -67,8 +74,13 @@ format = '[@](green)[$hostname](purple)'
 trim_at = '.local'
 disabled = false
 
-[bun]
-format = '[🍔 $version](bold green) '
+[os]
+format = "$symbol"
+style = "white"
+disabled = false
+[os.symbols]
+Macos = " "
+
 
 # [battery]
 # full_symbol = '🔋 '
