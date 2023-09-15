@@ -6,18 +6,21 @@ This repository contains dotfiles and images for my workspace (iTerm config and 
 
 Run this command to bootstrap your machine:
 
- ```
+```
  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/pseudobun/dotfiles/master/bootstrap.sh)"
- ```
+```
 
 > Note: 
 > Some of the commands in the script require `sudo` access. You will be prompted for your password. 
 > Some features (such as omf installation) are currently experimental.
 
+Currently, [Go](https://go.dev/) needs to be installed [manually](https://go.dev/doc/install).
+
 ## TODOs
 
 * [ ] Add option to generate new GPG key pair/import it from file and set it to default for git.
 * [ ] Add option to generate new SSH key pair/import it from file and add it to SSH agent.
+* [ ] Installing Go
 
 ## Configuration in action:
 
@@ -67,6 +70,7 @@ Run this command to bootstrap your machine:
 2. Import private key using `gpg --import private_key.asc`.
 
 ## Inspiration:
-- [martines3000/dotfiles](https://github.com/martines3000/dotfiles)
-- [br3ndonland/dotfiles](https://github.com/br3ndonland/dotfiles)
-- [eieioxyz/Beyond-Dotfiles-in-100-Seconds](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds)
+
+* [martines3000/dotfiles](https://github.com/martines3000/dotfiles)
+* [br3ndonland/dotfiles](https://github.com/br3ndonland/dotfiles)
+* [eieioxyz/Beyond-Dotfiles-in-100-Seconds](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds)
