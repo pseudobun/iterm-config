@@ -38,14 +38,18 @@ format = 'took [$duration](bold yellow)'
 symbol = ' '
 format = '[$symbol$branch(:$remote_branch)](purple bold)'
 
+[rust]
+symbol = " "
+format = '[$symbol$version](red bold) '
+
 [git_status]
 format = "$ahead_behind $staged"
 ahead = '[⇡${count}](green)'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-behind = '⇣${count}'
-conflicted = 'C'
+diverged = '[⇕⇡${ahead_count}](green)[⇣${behind_count}](yellow)'
+behind = '[⇣${count}](yellow)'
+conflicted = '[C](red bold)'
 up_to_date = '[✓](green bold)'
-stashed = '📦'
+stashed = ''
 modified = '✗'
 staged = '[++\($count\)](green)'
 
@@ -58,10 +62,10 @@ disabled = false
 [bun]
 format = '[🍔 $version](bold green) '
 
-[battery]
-full_symbol = '🔋 '
-charging_symbol = '⚡️ '
-discharging_symbol = '💀 '
-[[battery.display]]
-threshold = 100
-style = 'bold red'
+# [battery]
+# full_symbol = '🔋 '
+# charging_symbol = '⚡️ '
+# discharging_symbol = '💀 '
+# [[battery.display]]
+# threshold = 100
+# style = 'bold red'

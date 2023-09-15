@@ -15,12 +15,6 @@ function fish_prompt
   end
 
   set -l fish     "⋊>"
-  set -l ahead    "↑"
-  set -l behind   "↓"
-  set -l diverged "⥄"
-  set -l dirty    "✗"
-  set -l stash    "="
-  set -l none     "✓"
 
   set -l primary_color      (set_color normal)
   set -l secondary_color    (set_color cyan)
@@ -37,37 +31,11 @@ function fish_prompt
   end
 
   if test $last_command_status -eq 0
-    echo -n -s $secondary_color $prompt_string $primary_color
+    echo -ns $secondary_color $prompt_string $primary_color
   else
-    echo -n -s $error_color $prompt_string $primary_color
+    echo -ns $error_color $prompt_string $primary_color
   end
+  echo -ns " " $primary_color \[ $tertiary_color $cwd $primary_color \]
 
-  if git_is_repo
-    if test "$theme_short_path" = 'yes'
-      set root_folder (command git rev-parse --show-toplevel 2> /dev/null)
-      set parent_root_folder (dirname $root_folder)
-      set cwd (echo $PWD | sed -e "s|$parent_root_folder/||")
-    end
-
-    echo -n -s " " $primary_color \[ $tertiary_color $cwd $primary_color \]
-    echo -n -s "$special_color  " $repository_color (git_branch_name) $primary_color " "
-
-
-    set -l list
-    if test "$theme_stash_indicator" = yes; and git_is_stashed
-      set list $list $stash
-    end
-    if git_is_touched
-      set list $list $dirty
-    end
-    echo -n $list
-
-    if test -z "$list"
-      echo -n -s (git_ahead $ahead $behind $diverged $none)
-    end
-  else
-    echo -n -s " " $primary_color \[ $tertiary_color $cwd $primary_color \]
-  end
-
-  echo -n -s $secondary_color " $fish "
+  echo -nse $secondary_color "\n$fish "
 end

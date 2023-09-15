@@ -66,6 +66,8 @@ if [[ "$omf" == "y" ]] || [[ -z "$omf" ]]; then
 fi
 echo "Finished installing omf."
 
+# starship config
+mkdir -p ~/.config && ln -fs $dotfiles_path/.starship.toml ~/.config/starship.toml
 # macchina config folder
 mkdir -p ~/.config/macchina/themes
 # fish config folder

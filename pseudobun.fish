@@ -3,6 +3,7 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 zoxide init fish | source
+starship init fish | source
 
 abbr -a htop 'btm'
 abbr -a top 'btm'
@@ -15,7 +16,6 @@ alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
 alias tsm='transmission-remote'
 alias watchtsm="watch --interval 1 'transmission-remote -l'"
 
-# Add to PATH
 fish_add_path ~/.cargo/bin
 
 function cs
