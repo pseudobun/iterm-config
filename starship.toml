@@ -39,7 +39,7 @@ symbol = ' '
 format = '[$symbol$branch(:$remote_branch)](purple bold) '
 
 [git_status]
-format = "$up_to_date$modified$staged$ahead$behind$conflicted$untracked"
+format = "$up_to_date$diverged$modified$staged$ahead$behind$conflicted$untracked"
 ahead = '[⇡${count}](green) '
 diverged = '[⇕⇡${ahead_count}](green)[⇣${behind_count}](yellow) '
 behind = '[⇣${count}](yellow) '
