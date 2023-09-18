@@ -4,11 +4,11 @@
 add_newline = true
 format = '''
 [┌───────────────────](cyan)$fill
-[│](cyan)$os$username$hostname \[$directory\]
+[│](cyan)$os$username$hostname $directory $status
 [└─](cyan)$character
 '''
 right_format = '''
-$git_branch$git_status$nodejs$bun$rust$golang$cmd_duration
+$git_branch$git_status$nodejs$bun$rust$golang$cmd_duration$jobs
 '''
 
 [fill]
@@ -28,13 +28,19 @@ show_always = true
 
 [directory]
 truncation_symbol = '…/'
-format = '[$path](green)'
+format = '\[[$path](green)\]'
 repo_root_style = 'green bold'
 before_repo_root_style = 'green'
 repo_root_format = '[](green) [$repo_root]($repo_root_style)[$path](green)'
 truncate_to_repo = true
 fish_style_pwd_dir_length = 1
 home_symbol = "~"
+
+[jobs]
+format = "[$symbol$number](bold green) "
+symbol = ' '
+number_threshold = 2
+symbol_threshold = 1
 
 [directory.substitutions]
 "Documents" = "󰈙"
@@ -74,8 +80,16 @@ symbol = " "
 format = '[$symbol$version](bold cyan) '
 
 [nodejs]
-format = '[$symbol$version](bold yellow) '
+format = '[$symbol$version$engines_version]($style) '
 symbol = "󰎙 "
+style = "bold yellow"
+not_capable_style = "bold red"
+
+[status]
+style = 'bold red'
+symbol = ' '
+format = '[\($symbol$common_meaning$signal_name$maybe_int $status\)]($style) '
+disabled = false
 
 [bun]
 format = '[🍔 $version](bold green) '
