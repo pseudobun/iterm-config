@@ -4,7 +4,7 @@
 add_newline = true
 format = '''
 [┌───────────────────](cyan)$fill
-[│](cyan)$os$username$hostname $directory $status
+[│ ](cyan)$os$username$hostname $directory $status
 [└─](cyan)$character
 '''
 right_format = '''
