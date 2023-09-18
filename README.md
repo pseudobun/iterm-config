@@ -44,11 +44,13 @@ Currently, [Go](https://go.dev/) needs to be installed [manually](https://go.dev
 2. Install the fonts included ([JetBrains Mono](/fonts/JetBrainsMono/) or [Roboto Mono](/fonts/RobotoMono/)).
    1. Click on desired `.tiff` files and click install.
 
-## Set iTerm colors
+## Set iTerm colors, whichever you prefer
+
+I currently use DraculaPlus
 
 1. Open iTerm2.
 2. Go to `iTerm > Preferences > Profiles > Colors > Color Presets ...`.
-3. Pick `Flowerish.itermcolors`.
+3. Pick `Theme.itermcolors`.
 
 ## Import key bindings and profile
 
