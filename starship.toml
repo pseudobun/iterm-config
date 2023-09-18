@@ -3,12 +3,17 @@
 
 add_newline = true
 format = '''
-$os$username$hostname \[$directory\]
-$character
+[┌───────────────────](cyan)$fill
+[│](cyan)$os$username$hostname \[$directory\]
+[└─](cyan)$character
 '''
 right_format = '''
 $git_branch$git_status$nodejs$bun$rust$golang$cmd_duration
 '''
+
+[fill]
+symbol = '─'
+style = 'cyan'
 
 [character]
 success_symbol = '[⋊>](cyan)'
@@ -31,6 +36,13 @@ truncate_to_repo = true
 fish_style_pwd_dir_length = 1
 home_symbol = "~"
 
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+"repos" = ""
+
 [cmd_duration]
 min_time = 1
 format = 'took [$duration](bold yellow) '
@@ -40,14 +52,14 @@ symbol = ' '
 format = '[$symbol$branch(:$remote_branch)](purple bold) '
 
 [git_status]
-format = "$ahead_behind$conflicted$stashed$deleted$renamed$modified$untracked$staged"
+format = "$ahead_behind$stashed$conflicted$deleted$renamed$modified$untracked$staged"
 conflicted = '[C](red bold) '
 ahead = '[⇡${count}](green) '
 behind = '[⇣${count}](yellow) '
 diverged = '[⇕⇡${ahead_count}](green)[⇣${behind_count}](yellow) '
 up_to_date = '[✓](green bold) '
 untracked = '[?](yellow bold) '
-stashed = ' '
+stashed = '[](blue bold) '
 modified = '[✗](red bold) '
 staged = '[++\($count\)](green) '
 renamed = "[󰙏](cyan) "
