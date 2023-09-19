@@ -19,6 +19,8 @@ alias watchtsm="watch --interval 1 'transmission-remote -l'"
 
 fish_add_path ~/.cargo/bin
 
+load_nvm > /dev/stderr
+
 function cs
    z $argv
    exa -ahl --icons

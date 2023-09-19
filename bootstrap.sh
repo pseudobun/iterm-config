@@ -89,7 +89,7 @@ curl -o- $nvm_url | bash
 
 echo "Symlinking dotfiles..."
 ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
-ln -fs $dotfiles_path/functions/* ~/.local/share/omf/themes/pseudobun/functions
+ln -fs $dotfiles_path/functions/* ~/.config/fish/functions/
 ln -fs $dotfiles_path/macchina/pseudobun.toml ~/.config/macchina/themes
 ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
 fish ./setup.fish
