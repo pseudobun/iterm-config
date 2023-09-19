@@ -8,7 +8,7 @@ format = '''
 [└─](cyan)$character
 '''
 right_format = '''
-$git_branch$git_status$nodejs$bun$rust$golang$cmd_duration$jobs
+$git_branch$git_status$nodejs$bun$rust$golang$python$cmd_duration$jobs
 '''
 
 [fill]
@@ -84,6 +84,13 @@ format = '[$symbol$version$engines_version]($style) '
 symbol = "󰎙 "
 style = "bold yellow"
 not_capable_style = "bold red"
+
+[python]
+format = "[$symbol$pyenv_prefix($version )(($virtualenv) )]($style)"
+symbol = ' '
+pyenv_version_name = false
+style = "yellow bold"
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
 
 [status]
 style = 'bold red'
