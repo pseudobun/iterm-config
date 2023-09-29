@@ -1,4 +1,7 @@
 function load_nvm --on-variable="PWD"
+  if test "$PWD" = "/Users/pseudobun"
+    return
+  end
   set -l default_node_version (nvm version default)
   set -l node_version (nvm version)
   set -l nvmrc_path (nvm_find_nvmrc)
