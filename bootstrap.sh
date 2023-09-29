@@ -1,118 +1,122 @@
 #!/bin/bash
-if ! command -v xcode-select &>/dev/null; then
+
+dotfiles_path=~/.dotfiles
+
+setup_gpg() {
+    echo "Setting up GPG..."
+    [ ! -d ~/.gnupg ] && mkdir ~/.gnupg && echo "Created ~/.gnupg folder."
+
+    echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+    echo 'use-agent' >> ~/.gnupg/gpg.conf
+    echo "Finished setting up GPG."
+}
+
+install_xcode_tools() {
+    command -v xcode-select &>/dev/null && echo "Xcode CLI is already installed. Consider updating it manually..." && return
     echo "Xcode CLI is not installed, do you want to install it? (y/n): "
-    read xcode
+    read -r xcode
+
     if [ "$xcode" == "y" ] || [ -z "$xcode" ]; then
-        echo "Installing Xcode CLI..."
-        xcode-select --install
-        echo "Xcode CLI installed."
+        xcode-select --install && echo "Xcode CLI installed."
     else
-        echo "Xcode CLI is required for this script to work. Exiting..."
-        exit 1
+        echo "Xcode CLI is required for this script to work. Exiting..." && exit 1
     fi
-else
-    echo "Xcode CLI is already installed. Consider updating it manually..."
-fi
+}
 
-echo "Preparing to clone dotfiles repo..."
-echo "Enter the path where to clone the repo (default: ~/.dotfiles): "
-read dotfiles_path
+clone_dotfiles_repo() {
+    echo "Preparing to clone dotfiles repo..."
+    echo "Enter the path where to clone the repo (default: $dotfiles_path): "
+    read user_input
+    if [ -n "$user_input" ]; then
+        dotfiles_path=$user_input
+    fi
+    echo "Cloning dotfiles repo to $dotfiles_path..."
+    # git clone https://github.com/pseudobun/dotfiles.git $dotfiles_path
+    echo "Finished cloning dotfiles repo."
+    cd $dotfiles_path
+    echo "Executing in: $(pwd)"
+}
 
-if [ -z "$dotfiles_path" ]; then
-    dotfiles_path=~/.dotfiles
-fi
+manage_homebrew() {
+    if ! command -v brew &>/dev/null; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && echo "Homebrew installed."
+    else
+        brew update && brew upgrade && echo "Homebrew updated."
+    fi
+    brew bundle --file ./Brewfile && echo "Homebrew packages installed."
+}
 
-echo "Cloning dotfiles repo to $dotfiles_path..."
-git clone https://github.com/pseudobun/dotfiles.git ~/.dotfiles
-echo "Finished cloning dotfiles repo."
-cd $dotfiles_path
-echo "Executing in: $(pwd)"
-
-# check if homebrew is installed, if not install it, else update
-if ! command -v brew &>/dev/null; then
-    echo "Homebrew is not installed, installing it..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo "Homebrew installed."
-else
-    echo "Homebrew is already installed. Running brew upgrade..."
-    brew update
-    brew upgrade
-    echo "Homebrew updated."
-fi
-
-echo "Installing packages from Brewfile..."
-brew bundle --file ./Brewfile
-echo "Homebrew packages installed."
-
-if [ "$SHELL" == "$(which fish)" ]; then
-    echo "Fish shell is already set as the default shell."
-else
+set_fish_shell() {
+    [ "$SHELL" == "$(which fish)" ] && echo "Fish shell is already set as the default shell." && return
     echo "Do you want to set fish as default shell? (y/n): "
-    read fish
+    read -r fish
+
     if [[ "$fish" == "y" ]] || [[ -z "$fish" ]]; then
-        echo "Setting fish as default shell..."
-        echo $(which fish) | sudo tee -a /etc/shells
-        chsh -s $(which fish)
-        echo "Fish set as default shell."
+        echo "$(which fish)" | sudo tee -a /etc/shells
+        chsh -s "$(which fish)" && echo "Fish set as default shell."
     fi
-fi
+}
 
-echo "Installing omf (Oh-My-Fish)..."
-# FIXME: omf installation in this script setup.fish is not working, hangs
-echo "(EXPERIMENTAL) - Do you want to install omf (Oh-My-Fish)? (y/n): "
-read omf
-if [[ "$omf" == "y" ]] || [[ -z "$omf" ]]; then
-    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-fi
-echo "Finished installing omf."
+install_omf() {
+    echo "Installing omf (Oh-My-Fish)..."
+    echo "(EXPERIMENTAL) - Do you want to install omf (Oh-My-Fish)? (y/n): "
+    read -r omf
+    [[ "$omf" == "y" ]] || [[ -z "$omf" ]] && curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+    echo "Finished installing omf."
+}
 
-# starship config
-mkdir -p ~/.config && ln -fs $dotfiles_path/starship.toml ~/.config/starship.toml
-# macchina config folder
-mkdir -p ~/.config/macchina/themes
-# fish config folder
-mkdir -p ~/.config/fish
-# omf config folder
-mkdir -p ~/.local/share/omf/themes/pseudobun/functions
+setup_nvm() {
+    nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh"
+    echo "Install NVM from (default: $nvm_url): "
+    read -r nvm_alt_url
+    [ -n "$nvm_alt_url" ] && nvm_url=$nvm_alt_url
+    curl -o- $nvm_url | bash
+}
 
-# Install and set up up NVM
-nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh"
-echo "Install NVM from (default: $nvm_url): "
-read nvm_alt_url
-if [ -n "$nvm_alt_url" ]; then
-    nvm_url=$nvm_alt_url
-fi
+symlink_dotfiles() {
+    echo "Symlinking dotfiles..."
+    ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
+    ln -fs $dotfiles_path/functions/* ~/.config/fish/functions/
+    ln -fs $dotfiles_path/macchina/pseudobun.toml ~/.config/macchina/themes
+    ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
+    echo "Finished symlinking dotfiles."
+}
 
-curl -o- $nvm_url | bash
-# the line below not needed anymore due to fish-nvm
-# ln -fs $dotfiles_path/nvm.fish ~/.config/fish/functions <
+install_rust() {
+    echo "Installing Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    echo "Finished installing Rust."
+}
 
-echo "Symlinking dotfiles..."
-ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
-ln -fs $dotfiles_path/functions/* ~/.config/fish/functions/
-ln -fs $dotfiles_path/macchina/pseudobun.toml ~/.config/macchina/themes
-ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
-fish ./setup.fish
+install_bun() {
+    echo "Installing Bun..."
+    curl -fsSL https://bun.sh/install | bash
+    echo "Finished installing Bun."
+}
 
-if ! grep -q "source ~/.config/fish/pseudobun.fish" ~/.config/fish/config.fish; then
-    echo -e "\nsource ~/.config/fish/pseudobun.fish" | sudo tee -a ~/.config/fish/config.fish
-fi
-echo "Finished symlinking dotfiles."
+setup_macos_defaults() {
+    echo "Setting up MacOS defaults..."
+    defaults write .GlobalPreferences com.apple.mouse.scaling -1
+    defaults write com.apple.dock "scroll-to-open" -bool "true"
+    echo "Finished setting up MacOS defaults."
+}
 
-echo "Installing Rust..."
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-echo "Finished installing Rust."
+main() {
+    install_xcode_tools
+    clone_dotfiles_repo
+    manage_homebrew
+    set_fish_shell
+    install_omf
+    setup_nvm
+    setup_gpg
+    symlink_dotfiles
+    fish ./setup.fish
+    install_rust
+    install_bun
+    setup_macos_defaults
+    fish 
 
-# Experimental, we'll see if it stays here
-echo "Installing Bun..."
-curl -fsSL https://bun.sh/install | bash
-echo "Finished installing Bun."
+    echo "Finished setting up pseudobun's dotfiles."
+}
 
-# At the end set the remote to the ssh version
-git remote set-url origin git@github.com:pseudobun/dotfiles.git
-
-echo "Finished setting up pseudobun's dotfiles."
-
-# MacOS defaults
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
-defaults write com.apple.dock "scroll-to-open" -bool "true"
+main "$@"
