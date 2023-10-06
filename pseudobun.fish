@@ -18,6 +18,7 @@ abbr -a gp 'git push'
 abbr -a gc 'git checkout'
 abbr -a gcm 'git commit'
 abbr -a gm 'git merge'
+abbr -a gl 'git pull'
 
 alias please='sudo'
 alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
