@@ -68,7 +68,7 @@ untracked = '[?](yellow bold) '
 stashed = '[](blue bold) '
 modified = '[✗](red bold) '
 staged = '[++\($count\)](green) '
-renamed = "[󰙏](cyan) "
+renamed = "[󰙏](yellow) "
 deleted = "[](red) "
 
 [rust]
