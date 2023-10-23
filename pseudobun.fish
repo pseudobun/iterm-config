@@ -35,4 +35,9 @@ function cs
    exa -ahl --icons
 end
 
+function md
+   markdown $argv[1] | lynx -stdin
+end
+
+
 macchina -t pseudobun
