@@ -97,6 +97,7 @@ install_bun() {
 setup_macos_defaults() {
     echo "Setting up MacOS defaults..."
     defaults write .GlobalPreferences com.apple.mouse.scaling -1
+    defaults write com.apple.dock autohide-time-modifier -float 0.05
     defaults write com.apple.dock "scroll-to-open" -bool "true"
     echo "Finished setting up MacOS defaults."
 }
