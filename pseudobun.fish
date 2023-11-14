@@ -7,11 +7,15 @@ pyenv init - | source
 zoxide init fish | source
 starship init fish | source
 
+# base abbrs
 abbr -a htop 'btm'
 abbr -a top 'btm'
 abbr -a ls 'exa --icons'
 abbr -a cd 'z'
 abbr -a l 'exa -ahl --icons'
+abbr -a k 'kubectl'
+
+# git abbrs
 abbr -a gs 'git status'
 abbr -a ga 'git add'
 abbr -a gp 'git push'
@@ -25,6 +29,8 @@ alias please='sudo'
 alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
 alias tsm='transmission-remote'
 alias watchtsm="watch --interval 1 'transmission-remote -l'"
+
+kubectl completion fish | source
 
 load_nvm > /dev/stderr
 

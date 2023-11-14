@@ -71,6 +71,7 @@ brew "libraw"
 brew "imagemagick"
 brew "iperf3"
 brew "jq"
+brew "kubernetes-cli"
 brew "lynx"
 brew "macchina"
 brew "markdown"
@@ -116,6 +117,27 @@ cask "iterm2"
 cask "miniforge"
 cask "raycast"
 cask "stats"
+mas "DaisyDisk", id: 411643860
+mas "Diffusers", id: 1666309574
+mas "Dropover", id: 1355679052
+mas "FileZilla Pro", id: 1298486723
+mas "GarageBand", id: 682658836
+mas "Hex Fiend", id: 1342896380
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Reeder", id: 1529448980
+mas "Skitch", id: 425955336
+mas "Slack", id: 803453959
+mas "Strongbox", id: 897283731
+mas "Telegram", id: 747648890
+mas "The Unarchiver", id: 425424353
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
+mas "Yubico Authenticator", id: 1497506650
 vscode "bradlc.vscode-tailwindcss"
 vscode "ChakrounAnas.turbo-console-log"
 vscode "christian-kohler.npm-intellisense"
