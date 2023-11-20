@@ -116,6 +116,7 @@ cask "font-sf-mono-nerd-font-ligaturized"
 cask "he3"
 cask "iterm2"
 cask "miniforge"
+cask "pgadmin4"
 cask "raycast"
 cask "stats"
 mas "DaisyDisk", id: 411643860
