@@ -24,6 +24,7 @@ abbr -a gs 'git status'
 abbr -a gp 'git push'
 abbr -a gc 'git checkout'
 abbr -a gcm 'git commit'
+abbr -a gcma 'git commit -am'
 abbr -a gm 'git merge'
 abbr -a gr 'git rebase'
 abbr -a gl 'git pull'
@@ -33,6 +34,8 @@ abbr -a gb 'git branch'
 abbr -a gba 'git branch -a'
 abbr -a gbr 'git branch -r'
 abbr -a gbd 'git branch -d'
+
+abbr -a grp 'git remote prune origin'
 
 alias please='sudo'
 alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
@@ -52,6 +55,5 @@ end
 function md
    markdown $argv[1] | lynx -stdin
 end
-
 
 macchina -t pseudobun
