@@ -16,14 +16,23 @@ abbr -a l 'exa -ahl --icons'
 abbr -a k 'kubectl'
 
 # git abbrs
-abbr -a gs 'git status'
 abbr -a ga 'git add'
+abbr -a gaa 'git add --all'
+
+abbr -a gs 'git status'
+
 abbr -a gp 'git push'
 abbr -a gc 'git checkout'
 abbr -a gcm 'git commit'
 abbr -a gm 'git merge'
+abbr -a gr 'git rebase'
 abbr -a gl 'git pull'
 abbr -a gf 'git fetch'
+
+abbr -a gb 'git branch'
+abbr -a gba 'git branch -a'
+abbr -a gbr 'git branch -r'
+abbr -a gbd 'git branch -d'
 
 alias please='sudo'
 alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
