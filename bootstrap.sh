@@ -66,7 +66,7 @@ install_omf() {
 }
 
 setup_nvm() {
-    nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh"
+    nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh"
     echo "Install NVM from (default: $nvm_url): "
     read -r nvm_alt_url
     [ -n "$nvm_alt_url" ] && nvm_url=$nvm_alt_url
