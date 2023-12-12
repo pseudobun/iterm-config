@@ -11,12 +11,13 @@ brew "arp-scan"
 brew "autoconf"
 brew "automake"
 brew "bash"
+brew "openssl@3"
+brew "libssh2"
 brew "bat"
 brew "boost"
 brew "bottom"
 brew "broot"
 brew "gettext"
-brew "openssl@3"
 brew "neon"
 brew "cadaver"
 brew "glib"
@@ -26,7 +27,6 @@ brew "dua-cli"
 brew "dust"
 brew "folly"
 brew "edencommon"
-brew "libssh2"
 brew "exa"
 brew "fizz"
 brew "wangle"
@@ -82,7 +82,6 @@ brew "neomutt"
 brew "neovim"
 brew "netcat"
 brew "nmap"
-brew "nvm"
 brew "openjdk"
 brew "pinentry-mac"
 brew "poppler"
@@ -132,6 +131,7 @@ mas "Magnet", id: 441258766
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Raivo OTP", id: 1498497896
 mas "Reeder", id: 1529448980
 mas "Skitch", id: 425955336
 mas "Slack", id: 803453959
