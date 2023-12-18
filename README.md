@@ -21,6 +21,7 @@ Currently, [Go](https://go.dev/) needs to be installed [manually](https://go.dev
 * [ ] Add option to generate new GPG key pair/import it from file and set it to default for git.
 * [ ] Add option to generate new SSH key pair/import it from file and add it to SSH agent.
 * [ ] Installing Go
+* [ ] Installing and configuring yabai with skhd
 
 ## Configuration in action:
 
@@ -31,9 +32,13 @@ Currently, [Go](https://go.dev/) needs to be installed [manually](https://go.dev
 * [iTerm2](https://iterm2.com/)
 * [fish](https://github.com/fish-shell/fish-shell)
 * [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+* [yabai](https://github.com/koekeishiya/yabai)
 * [modern UNIX tools](https://github.com/ibraheemdev/modern-unix)
 * [Macchina](https://github.com/Macchina-CLI/macchina)
 * [pyenv](https://github.com/pyenv/pyenv)
+
+> ⚠️ Warning
+> Since I use yabai, please refer to their [docs](https://github.com/koekeishiya/yabai/wiki) for installation.
 
 ## Install fonts 
 

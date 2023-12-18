@@ -79,6 +79,8 @@ symlink_dotfiles() {
     ln -fs $dotfiles_path/functions/* ~/.config/fish/functions/
     ln -fs $dotfiles_path/macchina/pseudobun.toml ~/.config/macchina/themes
     ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
+    ln -fs $dotfiles_path/yabai/.yabairc ~/.yabairc
+    ln -fs $dotfiles_path/yabai/.skhdrc ~/.skhdrc
     echo "Finished symlinking dotfiles."
 }
 
