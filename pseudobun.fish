@@ -13,46 +13,46 @@ end
 function md
    markdown $argv[1] | lynx -stdin
 end
-~ status is-interactive
-   kubectl completion fish | source
-   alias please='sudo'
-   alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
-   alias sweep='fd --hidden --no-ignore "^.DS_Store\$" --exclude "*node_modules*" --exec rm'
-   alias tsm='transmission-remote'
-   alias watchtsm="watch --interval 1 'transmission-remote -l'"
-   # pyenv init - | source
-   zoxide init fish | source
-   starship init fish | source
 
-   # base abbrs
-   abbr -a htop 'btm'
-   abbr -a top 'btm'
-   abbr -a ls 'exa --icons'
-   abbr -a cd 'z'
-   abbr -a l 'exa -ahl --icons'
-   abbr -a k 'kubectl'
+kubectl completion fish | source
+alias please='sudo'
+alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
+alias sweep='fd --hidden --no-ignore "^.DS_Store\$" --exclude "*node_modules*" --exec rm'
+alias tsm='transmission-remote'
+alias watchtsm="watch --interval 1 'transmission-remote -l'"
+# pyenv init - | source
+zoxide init fish | source
+starship init fish | source
 
-   # git abbrs
-   abbr -a ga 'git add'
-   abbr -a gaa 'git add --all'
+# base abbrs
+abbr -a htop 'btm'
+abbr -a top 'btm'
+abbr -a ls 'exa --icons'
+abbr -a cd 'z'
+abbr -a l 'exa -ahl --icons'
+abbr -a k 'kubectl'
 
-   abbr -a gs 'git status'
+# git abbrs
+abbr -a ga 'git add'
+abbr -a gaa 'git add --all'
 
-   abbr -a gp 'git push'
-   abbr -a gc 'git checkout'
-   abbr -a gcm 'git commit'
-   abbr -a gcma 'git commit -am'
-   abbr -a gm 'git merge'
-   abbr -a gr 'git rebase'
-   abbr -a gl 'git pull'
-   abbr -a gf 'git fetch'
+abbr -a gs 'git status'
 
-   abbr -a gb 'git branch'
-   abbr -a gba 'git branch -a'
-   abbr -a gbr 'git branch -r'
-   abbr -a gbd 'git branch -d'
+abbr -a gp 'git push'
+abbr -a gc 'git checkout'
+abbr -a gcm 'git commit'
+abbr -a gcma 'git commit -am'
+abbr -a gm 'git merge'
+abbr -a gr 'git rebase'
+abbr -a gl 'git pull'
+abbr -a gf 'git fetch'
 
-   abbr -a grp 'git remote prune origin'
+abbr -a gb 'git branch'
+abbr -a gba 'git branch -a'
+abbr -a gbr 'git branch -r'
+abbr -a gbd 'git branch -d'
+
+abbr -a grp 'git remote prune origin'
    macchina -t pseudobun
-end
+
 
