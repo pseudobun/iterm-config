@@ -5,15 +5,6 @@ set --export GPG_TTY $(tty)
 
 load_nvm > /dev/stderr
 
-function cs
-   z $argv
-   exa -ahl --icons
-end
-
-function md
-   markdown $argv[1] | lynx -stdin
-end
-
 kubectl completion fish | source
 alias please='sudo'
 alias launchtsm='osascript $HOME/.dotfiles/transmission_lift.osascript'
@@ -27,9 +18,8 @@ starship init fish | source
 # base abbrs
 abbr -a htop 'btm'
 abbr -a top 'btm'
-abbr -a ls 'exa --icons'
 abbr -a cd 'z'
-abbr -a l 'exa -ahl --icons'
+abbr -a l 'exa -ahliH --icons'
 abbr -a k 'kubectl'
 
 # git abbrs
@@ -53,6 +43,14 @@ abbr -a gbr 'git branch -r'
 abbr -a gbd 'git branch -d'
 
 abbr -a grp 'git remote prune origin'
-   macchina -t pseudobun
 
+function cs
+   z $argv
+   exa -ahliH --icons
+end
 
+function md
+   markdown $argv[1] | lynx -stdin
+end
+
+macchina -t pseudobun
