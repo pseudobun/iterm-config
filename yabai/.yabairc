@@ -15,7 +15,7 @@ yabai -m rule --add --subrole="kAXDialogSubrole" manage=off
 yabai -m rule --add --subrole="kAXSystemDialogSubrole" manage=off
 yabai -m rule --add --subrole="kAXFloatingWindowSubrole" manage=off
 yabai -m rule --add --subrole="kAXSystemFloatingWindowSubrole" manage=off
-yabai -m rule --add app="^(iTerm2|He3|System Settings)\$" manage=off
+yabai -m rule --add app="^(iTerm2|He3|System Settings|Parallels Desktop)\$" manage=off
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
 # global settings
