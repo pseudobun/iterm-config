@@ -23,6 +23,10 @@ install_xcode_tools() {
     fi
 }
 
+install_kitty() {
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+}
+
 clone_dotfiles_repo() {
     echo "Preparing to clone dotfiles repo..."
     echo "Enter the path where to clone the repo (default: $dotfiles_path): "
@@ -76,8 +80,16 @@ setup_nvm() {
 symlink_dotfiles() {
     echo "Symlinking dotfiles..."
     ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
+    [ -d "~/.config/fish/functions" ] || mkdir -p "~/.config/fish/functions"
     ln -fs $dotfiles_path/functions/* ~/.config/fish/functions/
+
+    [ -d "~/.config/macchina/themes" ] || mkdir -p "~/.config/macchina/themes"
     ln -fs $dotfiles_path/macchina/pseudobun.toml ~/.config/macchina/themes
+
+    [ -d "~/.config/alacritty" ] || mkdir -p "~/.config/alacritty"
+    ln -fs $dotfiles_path/alacritty/alacritty.yml ~/.config/alacritty
+
+    [ -d "~/.config/fish" ] || mkdir -p "~/.config/fish"
     ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
     ln -fs $dotfiles_path/yabai/.yabairc ~/.yabairc
     ln -fs $dotfiles_path/yabai/.skhdrc ~/.skhdrc
@@ -117,6 +129,7 @@ main() {
     install_rust
     install_bun
     setup_macos_defaults
+    install_kitty
     fish 
 
     echo "Finished setting up pseudobun's dotfiles."
