@@ -9,7 +9,6 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-
 # Rules
 yabai -m rule --add --subrole="kAXDialogSubrole" manage=off
 yabai -m rule --add --subrole="kAXSystemDialogSubrole" manage=off
@@ -18,8 +17,14 @@ yabai -m rule --add --subrole="kAXSystemFloatingWindowSubrole" manage=off
 yabai -m rule --add app="^(iTerm2|He3|System Settings|Parallels Desktop)\$" manage=off
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
+# Signals
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
+
 # global settings
 yabai -m config                                 \
+    external_bar all:41:0                      \
     mouse_follows_focus          off            \
     focus_follows_mouse          off            \
     window_origin_display        default        \

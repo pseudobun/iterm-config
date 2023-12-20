@@ -89,6 +89,12 @@ symlink_dotfiles() {
     [ -d "~/.config/alacritty" ] || mkdir -p "~/.config/alacritty"
     ln -fs $dotfiles_path/alacritty/alacritty.yml ~/.config/alacritty
 
+    [ -d "~/.config/sketchybar/plugins" ] || mkdir -p "~/.config/sketchybar/plugins"
+    [ -d "~/.config/sketchybar/items" ] || mkdir -p "~/.config/sketchybar/items"
+    ln -fs $dotfiles_path/sketchybar/sketchybarrc ~/.config/sketchybar
+    ln -fs $dotfiles_path/sketchybar/plugins/* ~/.config/sketchybar/plugins
+    ln -fs $dotfiles_path/sketchybar/items/* ~/.config/sketchybar/items
+
     [ -d "~/.config/fish" ] || mkdir -p "~/.config/fish"
     ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
     ln -fs $dotfiles_path/yabai/.yabairc ~/.yabairc

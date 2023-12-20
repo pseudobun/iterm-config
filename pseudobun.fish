@@ -53,6 +53,13 @@ function md
    markdown $argv[1] | lynx -stdin
 end
 
+function brew
+   command brew $argv
+   if contains "upgrade" $argv; or contains "update" $argv; or contains "outdated" $argv
+     sketchybar --trigger brew_update
+   end
+ end
+
 # tabtab source for pnpm package
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true

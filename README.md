@@ -82,3 +82,5 @@ I currently use DraculaPlus
 * [martines3000/dotfiles](https://github.com/martines3000/dotfiles)
 * [br3ndonland/dotfiles](https://github.com/br3ndonland/dotfiles)
 * [eieioxyz/Beyond-Dotfiles-in-100-Seconds](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds)
+* [crissNb/dotfiles](https://github.com/crissNb/dotfiles)
+* [FelixKratz/SketchyBar](https://github.com/FelixKratz/SketchyBar)
