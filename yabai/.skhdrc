@@ -45,6 +45,21 @@ ralt - 8 : yabai -m space --focus 8; sketchybar --trigger window_focus
 ralt - 9 : yabai -m space --focus 9; sketchybar --trigger window_focus
 ralt - 0 : yabai -m space --focus 10; sketchybar --trigger window_focus
 
+# Next space
+ralt - d : yabai -m space --focus next; sketchybar --trigger window_focus
+
+# Previous space
+ralt - a : yabai -m space --focus prev; sketchybar --trigger window_focus
+
+# Move space left
+ralt + shift - a : yabai -m space --move prev; sketchybar --trigger window_focus
+
+# Move space right
+ralt + shift - d : yabai -m space --move next; sketchybar --trigger window_focus
+
+# Send space to display 2 (by display arrangement index)
+# yabai -m space --display 2
+
 # Move window to a space
 ctrl + shift - 1 : yabai -m window --space 1; sketchybar --trigger window_focus
 ctrl + shift - 2 : yabai -m window --space 2; sketchybar --trigger window_focus
@@ -91,8 +106,8 @@ cmd + ralt - 8 : yabai -m window --space 8; yabai -m space --focus 8; sketchybar
 cmd + ralt - 9 : yabai -m window --space 9; yabai -m space --focus 9; sketchybar --trigger window_focus
 cmd + ralt - 0 : yabai -m window --space 10; yabai -m space --focus 10; sketchybar --trigger window_focus
 
-# Toggle fullscreen current focused window
 ctrl + alt - return :  yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
+# Toggle fullscreen current focused window
 
 # MOVING WINDOWS
 ctrl + shift - left : yabai -m window --swap west  || $(yabai -m window --display west; yabai -m display --focus west); sketchybar --trigger window_focus
