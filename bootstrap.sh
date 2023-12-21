@@ -114,6 +114,13 @@ install_bun() {
     echo "Finished installing Bun."
 }
 
+install_spicetify() {
+    echo "Installing Spicetify..."
+    curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+    curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+    echo "Finished installing Spicetify."
+}
+
 setup_macos_defaults() {
     echo "Setting up MacOS defaults..."
     defaults write .GlobalPreferences com.apple.mouse.scaling -1
@@ -134,6 +141,7 @@ main() {
     fish ./setup.fish
     install_rust
     install_bun
+    install_spicetify
     setup_macos_defaults
     install_kitty
     fish 
