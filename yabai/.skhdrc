@@ -34,6 +34,17 @@ ctrl - 8 : yabai -m space --focus 8; sketchybar --trigger window_focus
 ctrl - 9 : yabai -m space --focus 9; sketchybar --trigger window_focus
 ctrl - 0 : yabai -m space --focus 10; sketchybar --trigger window_focus
 
+ralt - 1 : yabai -m space --focus 1; sketchybar --trigger window_focus
+ralt - 2 : yabai -m space --focus 2; sketchybar --trigger window_focus
+ralt - 3 : yabai -m space --focus 3; sketchybar --trigger window_focus
+ralt - 4 : yabai -m space --focus 4; sketchybar --trigger window_focus
+ralt - 5 : yabai -m space --focus 5; sketchybar --trigger window_focus
+ralt - 6 : yabai -m space --focus 6; sketchybar --trigger window_focus
+ralt - 7 : yabai -m space --focus 7; sketchybar --trigger window_focus
+ralt - 8 : yabai -m space --focus 8; sketchybar --trigger window_focus
+ralt - 9 : yabai -m space --focus 9; sketchybar --trigger window_focus
+ralt - 0 : yabai -m space --focus 10; sketchybar --trigger window_focus
+
 # Move window to a space
 ctrl + shift - 1 : yabai -m window --space 1; sketchybar --trigger window_focus
 ctrl + shift - 2 : yabai -m window --space 2; sketchybar --trigger window_focus
@@ -46,6 +57,17 @@ ctrl + shift - 8 : yabai -m window --space 8; sketchybar --trigger window_focus
 ctrl + shift - 9 : yabai -m window --space 9; sketchybar --trigger window_focus
 ctrl + shift - 0 : yabai -m window --space 10; sketchybar --trigger window_focus
 
+ralt + shift - 1 : yabai -m window --space 1; sketchybar --trigger window_focus
+ralt + shift - 2 : yabai -m window --space 2; sketchybar --trigger window_focus
+ralt + shift - 3 : yabai -m window --space 3; sketchybar --trigger window_focus
+ralt + shift - 4 : yabai -m window --space 4; sketchybar --trigger window_focus
+ralt + shift - 5 : yabai -m window --space 5; sketchybar --trigger window_focus
+ralt + shift - 6 : yabai -m window --space 6; sketchybar --trigger window_focus
+ralt + shift - 7 : yabai -m window --space 7; sketchybar --trigger window_focus
+ralt + shift - 8 : yabai -m window --space 8; sketchybar --trigger window_focus
+ralt + shift - 9 : yabai -m window --space 9; sketchybar --trigger window_focus
+ralt + shift - 0 : yabai -m window --space 10; sketchybar --trigger window_focus
+
 # Move window + focus to space
 cmd + ctrl - 1 : yabai -m window --space 1; yabai -m space --focus 1; sketchybar --trigger window_focus
 cmd + ctrl - 2 : yabai -m window --space 2; yabai -m space --focus 2; sketchybar --trigger window_focus
@@ -57,6 +79,17 @@ cmd + ctrl - 7 : yabai -m window --space 7; yabai -m space --focus 7; sketchybar
 cmd + ctrl - 8 : yabai -m window --space 8; yabai -m space --focus 8; sketchybar --trigger window_focus
 cmd + ctrl - 9 : yabai -m window --space 9; yabai -m space --focus 9; sketchybar --trigger window_focus
 cmd + ctrl - 0 : yabai -m window --space 10; yabai -m space --focus 10; sketchybar --trigger window_focus
+
+cmd + ralt - 1 : yabai -m window --space 1; yabai -m space --focus 1; sketchybar --trigger window_focus
+cmd + ralt - 2 : yabai -m window --space 2; yabai -m space --focus 2; sketchybar --trigger window_focus
+cmd + ralt - 3 : yabai -m window --space 3; yabai -m space --focus 3; sketchybar --trigger window_focus
+cmd + ralt - 4 : yabai -m window --space 4; yabai -m space --focus 4; sketchybar --trigger window_focus
+cmd + ralt - 5 : yabai -m window --space 5; yabai -m space --focus 5; sketchybar --trigger window_focus
+cmd + ralt - 6 : yabai -m window --space 6; yabai -m space --focus 6; sketchybar --trigger window_focus
+cmd + ralt - 7 : yabai -m window --space 7; yabai -m space --focus 7; sketchybar --trigger window_focus
+cmd + ralt - 8 : yabai -m window --space 8; yabai -m space --focus 8; sketchybar --trigger window_focus
+cmd + ralt - 9 : yabai -m window --space 9; yabai -m space --focus 9; sketchybar --trigger window_focus
+cmd + ralt - 0 : yabai -m window --space 10; yabai -m space --focus 10; sketchybar --trigger window_focus
 
 # Toggle fullscreen current focused window
 ctrl + alt - return :  yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
