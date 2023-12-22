@@ -12,6 +12,16 @@ ctrl - right : yabai -m window --focus east || yabai -m display --focus east; sk
 hyper - right : yabai -m window --focus stack.next; sketchybar --trigger window_focus
 hyper - left : yabai -m window --focus stack.prev; sketchybar --trigger window_focus
 
+# MOVING WINDOWS
+ctrl + alt - left : yabai -m window --swap west  || $(yabai -m window --display west; yabai -m display --focus west); sketchybar --trigger window_focus
+ctrl + alt - down : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south); sketchybar --trigger window_focus
+ctrl + alt - up : yabai -m window --swap north   || $(yabai -m window --display north; yabai -m display --focus north); sketchybar --trigger window_focus
+ctrl + alt - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east); sketchybar --trigger window_focus
+
+# Rotate windows clockwise and anticlockwise
+alt - r         : yabai -m space --rotate 270; sketchybar --trigger window_focus
+shift + alt - r : yabai -m space --rotate 90; sketchybar --trigger window_focus
+
 
 # SPACES
 # create a space
@@ -106,18 +116,8 @@ cmd + ralt - 8 : yabai -m window --space 8; yabai -m space --focus 8; sketchybar
 cmd + ralt - 9 : yabai -m window --space 9; yabai -m space --focus 9; sketchybar --trigger window_focus
 cmd + ralt - 0 : yabai -m window --space 10; yabai -m space --focus 10; sketchybar --trigger window_focus
 
-ctrl + alt - return :  yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
 # Toggle fullscreen current focused window
-
-# MOVING WINDOWS
-ctrl + shift - left : yabai -m window --swap west  || $(yabai -m window --display west; yabai -m display --focus west); sketchybar --trigger window_focus
-ctrl + shift - down : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south); sketchybar --trigger window_focus
-ctrl + shift - up : yabai -m window --swap north   || $(yabai -m window --display north; yabai -m display --focus north); sketchybar --trigger window_focus
-ctrl + shift - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east); sketchybar --trigger window_focus
-
-# Rotate windows clockwise and anticlockwise
-alt - r         : yabai -m space --rotate 270; sketchybar --trigger window_focus
-shift + alt - r : yabai -m space --rotate 90; sketchybar --trigger window_focus
+ctrl + alt - return :  yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
 
 
 # TOGGLE BETWEEN HORIZONTAL/VERTICAL SPLIT
