@@ -114,6 +114,16 @@ install_bun() {
     echo "Finished installing Bun."
 }
 
+install_appstore_apps() {
+    # Dropover
+    mas install 1355679052
+    mas install 1355679052
+    # Raivo OTP
+    mas install 1498497896
+    # Wireguard
+    mas install 1451685025
+}
+
 install_spicetify() {
     echo "Installing Spicetify..."
     curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
@@ -144,6 +154,7 @@ main() {
     install_spicetify
     setup_macos_defaults
     install_kitty
+    install_appstore_apps
     fish 
 
     echo "Finished setting up pseudobun's dotfiles."
