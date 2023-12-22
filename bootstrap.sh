@@ -151,6 +151,10 @@ start_services() {
     echo "yabai and skhd services have been installed. remember to edit the .plist files to change default shell to /bin/sh, see: https://gist.github.com/pseudobun/34c42b0bf20e82f114fd232c8ce55fe2"
 }
 
+auth_gh() {
+    gh auth login
+}
+
 main() {
     install_xcode_tools
     clone_dotfiles_repo
@@ -167,6 +171,7 @@ main() {
     setup_macos_defaults
     install_kitty
     install_appstore_apps
+    auth_gh
     start_services
     echo "Finished setting up pseudobun's dotfiles."
     echo "Make sure everything is ok and reboot your Mac."
