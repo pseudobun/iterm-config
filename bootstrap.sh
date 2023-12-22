@@ -8,6 +8,8 @@ setup_gpg() {
 
     echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
     echo 'use-agent' >> ~/.gnupg/gpg.conf
+    echo "no-emit-version" >> ~/.gnupg/gpg.conf
+    echo "default-key 7A5C62926461D990A0575C9EA03490EFF21E32E9" >> ~/.gnupg/gpg.conf
     echo "Finished setting up GPG."
 }
 
@@ -117,7 +119,6 @@ install_bun() {
 install_appstore_apps() {
     # Dropover
     mas install 1355679052
-    mas install 1355679052
     # Raivo OTP
     mas install 1498497896
     # Wireguard
@@ -161,12 +162,10 @@ main() {
     setup_macos_defaults
     install_kitty
     install_appstore_apps
-    fish
     start_services
-    
-
     echo "Finished setting up pseudobun's dotfiles."
     echo "Make sure everything is ok and reboot your Mac."
+    fish
 }
 
 main "$@"
