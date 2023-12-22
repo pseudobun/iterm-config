@@ -123,6 +123,8 @@ install_appstore_apps() {
     mas install 1451685025
     # Magnet
     mas install 441258766
+    # Reeder
+    mas install 1529448980
 }
 
 install_spicetify() {
