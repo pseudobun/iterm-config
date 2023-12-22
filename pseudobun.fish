@@ -3,6 +3,8 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 set --export GPG_TTY $(tty)
 
+eval (/opt/homebrew/bin/brew shellenv)
+fish_add_path ~/.cargo/bin/
 load_nvm > /dev/stderr
 
 kubectl completion fish | source
@@ -63,5 +65,3 @@ function brew
 # tabtab source for pnpm package
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
-
-macchina -t pseudobun
