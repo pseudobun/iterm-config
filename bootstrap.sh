@@ -146,6 +146,7 @@ start_services() {
     skhd --stop-service
     yabai --install-service
     skhd --install-service
+    spicetify apply
 
     echo "yabai and skhd services have been installed. remember to edit the .plist files to change default shell to /bin/sh, see: https://gist.github.com/pseudobun/34c42b0bf20e82f114fd232c8ce55fe2"
 }
