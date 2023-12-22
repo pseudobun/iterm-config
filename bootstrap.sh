@@ -99,6 +99,9 @@ symlink_dotfiles() {
     ln -fs $dotfiles_path/sketchybar/plugins/* ~/.config/sketchybar/plugins
     ln -fs $dotfiles_path/sketchybar/items/* ~/.config/sketchybar/items
 
+    echo "Downloading required fonts for Sketchybar..."
+    curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.16/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+
     [ -d "~/.config/fish" ] || mkdir -p ~/.config/fish
     ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
     ln -fs $dotfiles_path/yabai/.yabairc ~/.yabairc
