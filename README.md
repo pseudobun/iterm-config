@@ -27,11 +27,13 @@ Currently, [Go](https://go.dev/) needs to be installed [manually](https://go.dev
 
 ![iTerm2 Appearance](showcase.png)
 
+
 ## Some of the tools I use:
 
 * [iTerm2](https://iterm2.com/)
 * [fish](https://github.com/fish-shell/fish-shell)
 * [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+* [Raycast](https://www.raycast.com/)
 * [yabai](https://github.com/koekeishiya/yabai)
 * [modern UNIX tools](https://github.com/ibraheemdev/modern-unix)
 * [Macchina](https://github.com/Macchina-CLI/macchina)
@@ -39,6 +41,11 @@ Currently, [Go](https://go.dev/) needs to be installed [manually](https://go.dev
 
 > ⚠️ Warning
 > Since I use yabai, please refer to their [docs](https://github.com/koekeishiya/yabai/wiki) for installation.
+
+## Raycast
+
+Raycast is an alternative (on steroids) to Spotlight. Import [settings](raycast/raycast.rayconfig).
+
 
 ## Install fonts 
 
@@ -83,4 +90,4 @@ I currently use DraculaPlus
 * [br3ndonland/dotfiles](https://github.com/br3ndonland/dotfiles)
 * [eieioxyz/Beyond-Dotfiles-in-100-Seconds](https://github.com/eieioxyz/Beyond-Dotfiles-in-100-Seconds)
 * [crissNb/dotfiles](https://github.com/crissNb/dotfiles)
-* [FelixKratz/SketchyBar](https://github.com/FelixKratz/SketchyBar)
+* [FelixKratz/dotfiles](https://github.com/FelixKratz/dotfiles)
