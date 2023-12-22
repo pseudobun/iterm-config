@@ -91,9 +91,11 @@ symlink_dotfiles() {
     [ -d "~/.config/sketchybar" ] || mkdir -p ~/.config/sketchybar
     [ -d "~/.config/sketchybar/plugins" ] || mkdir -p ~/.config/sketchybar/plugins
     [ -d "~/.config/sketchybar/items" ] || mkdir -p ~/.config/sketchybar/items
+    [ -d "~/.config/sketchybar/helper" ] || mkdir -p ~/.config/sketchybar/helper
     ln -fs $dotfiles_path/sketchybar/sketchybarrc ~/.config/sketchybar/sketchybarrc
     ln -fs $dotfiles_path/sketchybar/colors.sh ~/.config/sketchybar/colors.sh
     ln -fs $dotfiles_path/sketchybar/icons.sh ~/.config/sketchybar/icons.sh
+    ln -fs $dotfiles_path/sketchybar/helper/* ~/.config/sketchybar/helper
     ln -fs $dotfiles_path/sketchybar/plugins/* ~/.config/sketchybar/plugins
     ln -fs $dotfiles_path/sketchybar/items/* ~/.config/sketchybar/items
 
