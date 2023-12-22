@@ -93,9 +93,7 @@ symlink_dotfiles() {
 
     [ -d "~/.config/sketchybar/plugins" ] || mkdir -p "~/.config/sketchybar/plugins"
     [ -d "~/.config/sketchybar/items" ] || mkdir -p "~/.config/sketchybar/items"
-    ln -fs $dotfiles_path/sketchybar/sketchybarrc ~/.config/sketchybar
-    ln -fs $dotfiles_path/sketchybar/plugins/* ~/.config/sketchybar/plugins
-    ln -fs $dotfiles_path/sketchybar/items/* ~/.config/sketchybar/items
+    ln -fs $dotfiles_path/sketchybar/* ~/.config/sketchybar
 
     [ -d "~/.config/fish" ] || mkdir -p "~/.config/fish"
     ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
@@ -146,8 +144,10 @@ start_services() {
     brew services start sketchybar
     yabai --stop-service
     skhd --stop-service
-    yabai --start-service
-    skhd --start-service
+    yabai --install-service
+    skhd --install-service
+
+    echo "yabai and skhd services have been installed. remember to edit the .plist files to change default shell to /bin/sh, see: https://gist.github.com/pseudobun/34c42b0bf20e82f114fd232c8ce55fe2"
 }
 
 main() {
