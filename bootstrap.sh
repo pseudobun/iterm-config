@@ -37,7 +37,7 @@ clone_dotfiles_repo() {
         dotfiles_path=$user_input
     fi
     echo "Cloning dotfiles repo to $dotfiles_path..."
-    # git clone https://github.com/pseudobun/dotfiles.git $dotfiles_path
+    git clone https://github.com/pseudobun/dotfiles.git $dotfiles_path
     echo "Finished cloning dotfiles repo."
     cd $dotfiles_path
     echo "Executing in: $(pwd)"
