@@ -36,7 +36,6 @@ Currently, [Go](https://go.dev/) needs to be installed [manually](https://go.dev
 * [Raycast](https://www.raycast.com/)
 * [yabai](https://github.com/koekeishiya/yabai)
 * [modern UNIX tools](https://github.com/ibraheemdev/modern-unix)
-* [Macchina](https://github.com/Macchina-CLI/macchina)
 * [pyenv](https://github.com/pyenv/pyenv)
 
 > ⚠️ Warning
