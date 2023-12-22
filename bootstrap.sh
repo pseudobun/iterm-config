@@ -123,6 +123,8 @@ install_appstore_apps() {
     mas install 1498497896
     # Wireguard
     mas install 1451685025
+    # Magnet
+    mas install 441258766
 }
 
 install_spicetify() {
@@ -142,8 +144,10 @@ setup_macos_defaults() {
 
 start_services() {
     brew services start sketchybar
+    yabai --stop-service
+    skhd --stop-service
     yabai --start-service
-    skhd --star-service
+    skhd --start-service
 }
 
 main() {
