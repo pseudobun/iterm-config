@@ -1,6 +1,8 @@
 font:
   normal:
     family: Liga SFMono Nerd Font
+shell:
+  program: /opt/homebrew/bin/fish
 window:
   opacity: 0.8
   blur: true
