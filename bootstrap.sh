@@ -139,6 +139,12 @@ setup_macos_defaults() {
     echo "Finished setting up MacOS defaults."
 }
 
+start_services() {
+    brew services start sketchybar
+    yabai --start-service
+    skhd --star-service
+}
+
 main() {
     install_xcode_tools
     clone_dotfiles_repo
@@ -155,9 +161,12 @@ main() {
     setup_macos_defaults
     install_kitty
     install_appstore_apps
-    fish 
+    fish
+    start_services
+    
 
     echo "Finished setting up pseudobun's dotfiles."
+    echo "Make sure everything is ok and reboot your Mac."
 }
 
 main "$@"
