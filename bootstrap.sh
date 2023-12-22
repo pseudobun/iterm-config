@@ -82,20 +82,21 @@ setup_nvm() {
 symlink_dotfiles() {
     echo "Symlinking dotfiles..."
     ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
-    [ -d "~/.config/fish/functions" ] || mkdir -p "~/.config/fish/functions"
+    [ -d "~/.config/fish/functions" ] || mkdir -p ~/.config/fish/functions
     ln -fs $dotfiles_path/functions/* ~/.config/fish/functions/
+    
+    ln -fs $dotfiles_path/starship.toml ~/.config/
+    ln -fs $dotfiles_path/alacritty/alacritty.yml ~/.config/alacritty.yml
 
-    [ -d "~/.config/macchina/themes" ] || mkdir -p "~/.config/macchina/themes"
-    ln -fs $dotfiles_path/macchina/pseudobun.toml ~/.config/macchina/themes
+    [ -d "~/.config/sketchybar" ] || mkdir -p ~/.config/sketchybar
+    [ -d "~/.config/sketchybar/plugins" ] || mkdir -p ~/.config/sketchybar/plugins
+    [ -d "~/.config/sketchybar/items" ] || mkdir -p ~/.config/sketchybar/items
+    ln -fs $dotfiles_path/sketchybar/sketchybarrc ~/.config/sketchybar/sketchybarrc
+    ln -fs $dotfiles_path/sketchybar/*.sh ~/.config/sketchybar/
+    ln -fs $dotfiles_path/sketchybar/plugins/* ~/.config/sketchybar/plugins
+    ln -fs $dotfiles_path/sketchybar/items/* ~/.config/sketchybar/items
 
-    [ -d "~/.config/alacritty" ] || mkdir -p "~/.config/alacritty"
-    ln -fs $dotfiles_path/alacritty/alacritty.yml ~/.config/alacritty
-
-    [ -d "~/.config/sketchybar/plugins" ] || mkdir -p "~/.config/sketchybar/plugins"
-    [ -d "~/.config/sketchybar/items" ] || mkdir -p "~/.config/sketchybar/items"
-    ln -fs $dotfiles_path/sketchybar/* ~/.config/sketchybar
-
-    [ -d "~/.config/fish" ] || mkdir -p "~/.config/fish"
+    [ -d "~/.config/fish" ] || mkdir -p ~/.config/fish
     ln -fs $dotfiles_path/pseudobun.fish ~/.config/fish
     ln -fs $dotfiles_path/yabai/.yabairc ~/.yabairc
     ln -fs $dotfiles_path/yabai/.skhdrc ~/.skhdrc
@@ -172,7 +173,8 @@ main() {
     install_spicetify
     setup_macos_defaults
     install_kitty
-    install_appstore_apps
+    # Not needed apparently brewfile has this all covered
+    # install_appstore_apps
     auth_gh
     start_services
     echo "Finished setting up pseudobun's dotfiles."
