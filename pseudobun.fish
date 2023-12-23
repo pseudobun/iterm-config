@@ -32,7 +32,7 @@ abbr -a gs 'git status'
 
 abbr -a gp 'git push'
 abbr -a gc 'git checkout'
-abbr -a gcm 'git commit'
+abbr -a gcm 'git commit -Sm'
 abbr -a gcma 'git commit -am'
 abbr -a gm 'git merge'
 abbr -a gr 'git rebase'
