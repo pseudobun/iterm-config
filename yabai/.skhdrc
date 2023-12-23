@@ -26,7 +26,6 @@ shift + alt - r : yabai -m space --rotate 90; sketchybar --trigger window_focus
 # SPACES
 # create a space
 hyper - n : yabai -m space --create; \
-		sketchybar --update; \
         sketchybar --trigger window_focus
 
 # destroy current space
@@ -44,22 +43,24 @@ ctrl - 8 : yabai -m space --focus 8; sketchybar --trigger window_focus
 ctrl - 9 : yabai -m space --focus 9; sketchybar --trigger window_focus
 ctrl - 0 : yabai -m space --focus 10; sketchybar --trigger window_focus
 
-ralt - 1 : yabai -m space --focus 1; sketchybar --trigger window_focus
-ralt - 2 : yabai -m space --focus 2; sketchybar --trigger window_focus
-ralt - 3 : yabai -m space --focus 3; sketchybar --trigger window_focus
-ralt - 4 : yabai -m space --focus 4; sketchybar --trigger window_focus
-ralt - 5 : yabai -m space --focus 5; sketchybar --trigger window_focus
-ralt - 6 : yabai -m space --focus 6; sketchybar --trigger window_focus
-ralt - 7 : yabai -m space --focus 7; sketchybar --trigger window_focus
-ralt - 8 : yabai -m space --focus 8; sketchybar --trigger window_focus
-ralt - 9 : yabai -m space --focus 9; sketchybar --trigger window_focus
-ralt - 0 : yabai -m space --focus 10; sketchybar --trigger window_focus
+# FIXME: current workaround until yabai scripting additions are update for macos 14.2
+# see: https://github.com/koekeishiya/yabai/issues/2007
+# ralt - 1 : yabai -m space --focus 1; sketchybar --trigger window_focus
+# ralt - 2 : yabai -m space --focus 2; sketchybar --trigger window_focus
+# ralt - 3 : yabai -m space --focus 3; sketchybar --trigger window_focus
+# ralt - 4 : yabai -m space --focus 4; sketchybar --trigger window_focus
+# ralt - 5 : yabai -m space --focus 5; sketchybar --trigger window_focus
+# ralt - 6 : yabai -m space --focus 6; sketchybar --trigger window_focus
+# ralt - 7 : yabai -m space --focus 7; sketchybar --trigger window_focus
+# ralt - 8 : yabai -m space --focus 8; sketchybar --trigger window_focus
+# ralt - 9 : yabai -m space --focus 9; sketchybar --trigger window_focus
+# ralt - 0 : yabai -m space --focus 10; sketchybar --trigger window_focus
 
 # Next space
-ralt - d : yabai -m space --focus next; sketchybar --trigger window_focus
+# ralt - d : yabai -m space --focus next; sketchybar --trigger window_focus
 
 # Previous space
-ralt - a : yabai -m space --focus prev; sketchybar --trigger window_focus
+# ralt - a : yabai -m space --focus prev; sketchybar --trigger window_focus
 
 # Move space left
 ralt + shift - a : yabai -m space --move prev; sketchybar --trigger window_focus
