@@ -45,7 +45,7 @@ abbr -a gbr 'git branch -r'
 abbr -a gbd 'git branch -d'
 
 abbr -a zeus 'ssh root@zeus'
-ssh -a minsky 'root@minsky'
+abbr -a minsky 'ssh root@minsky'
 
 abbr -a grp 'git remote prune origin'
 
