@@ -16,6 +16,7 @@ yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 # Signals
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
+yabai -m signal --add event=space_changed action="sketchybar --trigger windows_on_spaces"
 yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
 
 # global settings
@@ -26,7 +27,7 @@ yabai -m config                                 \
     window_origin_display        default        \
     window_placement             second_child   \
     window_zoom_persist          on             \
-    window_shadow                on             \
+    window_shadow                off            \
     window_opacity               off            \
     insert_feedback_color        0xaad75f5f     \
     split_ratio                  0.50           \
