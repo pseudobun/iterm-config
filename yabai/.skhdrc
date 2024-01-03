@@ -20,7 +20,7 @@ ctrl + alt - right : yabai -m window --swap east || $(yabai -m window --display 
 
 # Rotate windows clockwise and anticlockwise
 alt - r         : yabai -m space --rotate 270; sketchybar --trigger window_focus
-shift + alt - r : yabai -m space --rotate 90; sketchybar --trigger window_focus
+# shift + alt - r : yabai -m space --rotate 90; sketchybar --trigger window_focus
 
 
 # SPACES
