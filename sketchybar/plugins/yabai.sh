@@ -39,7 +39,6 @@ window_state() {
 
 windows_on_spaces () {
   CURRENT_SPACES="$(yabai -m query --displays | jq -r '.[].spaces | @sh')"
-
   args=()
   while read -r line
   do
