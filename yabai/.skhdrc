@@ -26,10 +26,10 @@ alt - r         : yabai -m space --rotate 270; sketchybar --trigger window_focus
 # SPACES
 # create a space
 hyper - n : yabai -m space --create; \
-        sketchybar --trigger window_focus
+        sketchybar --trigger windows_on_space
 
 # destroy current space
-hyper - d : yabai -m space --destroy; sketchybar --trigger window_focus
+hyper - d : yabai -m space --destroy; sketchybar --trigger windows_on_space
 
 # Focus
 ctrl - 1 : yabai -m space --focus 1; sketchybar --trigger window_focus
@@ -61,10 +61,10 @@ ralt - d : yabai -m space --focus next; sketchybar --trigger window_focus
 ralt - a : yabai -m space --focus prev; sketchybar --trigger window_focus
 
 # Move space left
-ralt + shift - a : yabai -m space --move prev; sketchybar --trigger window_focus
+ralt + shift - a : yabai -m space --move prev; sketchybar --trigger windows_on_space
 
 # Move space right
-ralt + shift - d : yabai -m space --move next; sketchybar --trigger window_focus
+ralt + shift - d : yabai -m space --move next; sketchybar --trigger windows_on_space
 
 # Send space to display 2 (by display arrangement index)
 # yabai -m space --display 2
