@@ -55,10 +55,12 @@ ralt - 9 : yabai -m space --focus 9; sketchybar --trigger window_focus
 ralt - 0 : yabai -m space --focus 10; sketchybar --trigger window_focus
 
 # Next space
-ralt - d : yabai -m space --focus next; sketchybar --trigger windows_on_spaces
+ralt - d : yabai -m space --focus next; 
+# sketchybar --trigger windows_on_spaces
 
 # Previous space
-ralt - a : yabai -m space --focus prev; sketchybar --trigger windows_on_spaces
+ralt - a : yabai -m space --focus prev; 
+# sketchybar --trigger windows_on_spaces
 
 # Move space left
 ralt + shift - a : yabai -m space --move prev; sketchybar --trigger windows_on_spaces
