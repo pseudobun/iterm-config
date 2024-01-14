@@ -72,17 +72,6 @@ ralt + shift - d : yabai -m space --move next; sketchybar --trigger windows_on_s
 # yabai -m space --display 2
 
 # Move window to a space
-ctrl + shift - 1 : yabai -m window --space 1; sketchybar --trigger window_focus
-ctrl + shift - 2 : yabai -m window --space 2; sketchybar --trigger window_focus
-ctrl + shift - 3 : yabai -m window --space 3; sketchybar --trigger window_focus
-ctrl + shift - 4 : yabai -m window --space 4; sketchybar --trigger window_focus
-ctrl + shift - 5 : yabai -m window --space 5; sketchybar --trigger window_focus
-ctrl + shift - 6 : yabai -m window --space 6; sketchybar --trigger window_focus
-ctrl + shift - 7 : yabai -m window --space 7; sketchybar --trigger window_focus
-ctrl + shift - 8 : yabai -m window --space 8; sketchybar --trigger window_focus
-ctrl + shift - 9 : yabai -m window --space 9; sketchybar --trigger window_focus
-ctrl + shift - 0 : yabai -m window --space 10; sketchybar --trigger window_focus
-
 ralt + shift - 1 : yabai -m window --space 1; sketchybar --trigger window_focus
 ralt + shift - 2 : yabai -m window --space 2; sketchybar --trigger window_focus
 ralt + shift - 3 : yabai -m window --space 3; sketchybar --trigger window_focus
