@@ -6,10 +6,10 @@ setup_gpg() {
     echo "Setting up GPG..."
     [ ! -d ~/.gnupg ] && mkdir ~/.gnupg && echo "Created ~/.gnupg folder."
 
-    echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
-    echo 'use-agent' >> ~/.gnupg/gpg.conf
-    echo "no-emit-version" >> ~/.gnupg/gpg.conf
-    echo "default-key 7A5C62926461D990A0575C9EA03490EFF21E32E9" >> ~/.gnupg/gpg.conf
+    echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
+    echo 'use-agent' >>~/.gnupg/gpg.conf
+    echo "no-emit-version" >>~/.gnupg/gpg.conf
+    echo "default-key 7A5C62926461D990A0575C9EA03490EFF21E32E9" >>~/.gnupg/gpg.conf
     echo "Finished setting up GPG."
 }
 
@@ -71,6 +71,12 @@ install_omf() {
     echo "Finished installing omf."
 }
 
+install_foundry() {
+    echo "Installing Foundry..."
+    curl -L https://foundry.paradigm.xyz | bash
+    echo "Finished installing Foundry."
+}
+
 setup_nvm() {
     nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh"
     echo "Install NVM from (default: $nvm_url): "
@@ -84,7 +90,6 @@ symlink_dotfiles() {
     ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
     [ -d "~/.config/fish/functions" ] || mkdir -p ~/.config/fish/functions
     ln -fs $dotfiles_path/functions/* ~/.config/fish/functions/
-    
     ln -fs $dotfiles_path/starship.toml ~/.config/
     ln -fs $dotfiles_path/alacritty/alacritty.yml ~/.config/alacritty.yml
 
@@ -178,6 +183,7 @@ main() {
     symlink_dotfiles
     fish ./setup.fish
     install_rust
+    install_foundry
     install_bun
     install_spicetify
     setup_macos_defaults
