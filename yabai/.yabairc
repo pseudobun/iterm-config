@@ -11,6 +11,11 @@ sudo yabai --load-sa
 
 # Rules
 yabai -m rule --add app="^(iTerm2|He3|System Settings|Parallels Desktop|KeePassXC)\$" manage=off layer=below
+yabai -m rule --add app="^Google Chrome$" manage=off
+yabai -m rule --add app="^Google Chrome$" title="Google Chrome" manage=on
+yabai -m rule --add app="^Arc$" manage=off
+yabai -m rule --add app="^Arc$" title="Arc" manage=on
+
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
 # Signals
@@ -21,33 +26,33 @@ yabai -m signal --add event=space_destroyed action="sketchybar --trigger windows
 yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
 
 # global settings
-yabai -m config                                 \
-    external_bar all:41:0                       \
-    mouse_follows_focus          on             \
-    focus_follows_mouse          off            \
-    window_origin_display        default        \
-    window_placement             second_child   \
-    window_zoom_persist          on             \
-    window_shadow                float          \
-    window_opacity               off            \
-    insert_feedback_color        0xaad75f5f     \
-    split_ratio                  0.50           \
-    split_type                   auto           \
-    auto_balance                 off            \
-    top_padding                  2              \
-    bottom_padding               2              \
-    left_padding                 2              \
-    right_padding                2              \
-    window_gap                   2              \
-    layout                       stack          \
-    mouse_modifier               fn             \
-    mouse_action1                move           \
-    mouse_action2                resize         \
-    mouse_drop_action            swap
-    # can be turned on if you'd like
-    # active_window_opacity 1.0                   \
-    # normal_window_opacity 0.9                   \
-    # FIXME: animation config causes flickering in stack mode, see: https://github.com/koekeishiya/yabai/issues/2022
-    # window_animation_duration    0.25           \
+yabai -m config \
+    external_bar all:41:0 \
+    mouse_follows_focus on \
+    focus_follows_mouse off \
+    window_origin_display default \
+    window_placement second_child \
+    window_zoom_persist on \
+    window_shadow float \
+    window_opacity off \
+    insert_feedback_color 0xaad75f5f \
+    split_ratio 0.50 \
+    split_type auto \
+    auto_balance off \
+    top_padding 2 \
+    bottom_padding 2 \
+    left_padding 2 \
+    right_padding 2 \
+    window_gap 2 \
+    layout stack \
+    mouse_modifier fn \
+    mouse_action1 move \
+    mouse_action2 resize \
+    mouse_drop_action swap
+# can be turned on if you'd like
+# active_window_opacity 1.0                   \
+# normal_window_opacity 0.9                   \
+# FIXME: animation config causes flickering in stack mode, see: https://github.com/koekeishiya/yabai/issues/2022
+# window_animation_duration    0.25           \
 
 echo "yabai configuration loaded.."
