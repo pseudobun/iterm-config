@@ -13,10 +13,8 @@ sudo yabai --load-sa
 yabai -m rule --add app="^(iTerm2|He3|System Settings|Parallels Desktop|KeePassXC)\$" manage=off layer=below
 yabai -m rule --add app="^Google Chrome$" manage=off
 yabai -m rule --add app="^Google Chrome$" title="Google Chrome" manage=on
-yabai -m rule --add app="^Arc$" manage=off
-yabai -m rule --add app="^Arc$" title="Arc" manage=on
 yabai -m rule --add app="^Brave Browser$" manage=off
-yabai -m rule --add app="^Brave Browser$" title="Brave Browser" manage=on
+yabai -m rule --add app="^Brave Browser$" title="Brave" manage=on
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
 # Signals
