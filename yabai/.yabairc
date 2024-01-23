@@ -15,8 +15,8 @@ yabai -m rule --add app="^Google Chrome$" manage=off
 yabai -m rule --add app="^Google Chrome$" title="Google Chrome" manage=on
 yabai -m rule --add app="^Arc$" manage=off
 yabai -m rule --add app="^Arc$" title="Arc" manage=on
-yabai -m rule --add app="^Brave$" manage=off
-yabai -m rule --add app="^Brave$" title="Brave" manage=on
+yabai -m rule --add app="^Brave Browser$" manage=off
+yabai -m rule --add app="^Brave$" title="Brave Browser" manage=on
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 
 # Signals
