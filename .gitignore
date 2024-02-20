@@ -1,2 +1,3 @@
 *.lock.json
 *.out
+env.local.sh
