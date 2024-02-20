@@ -1,28 +1,27 @@
 #!/bin/bash
 
 source "$CONFIG_DIR/colors.sh" # Loads all defined colors
-source "$CONFIG_DIR/icons.sh" # Loads all defined icons
+source "$CONFIG_DIR/icons.sh"  # Loads all defined icons
 
-ITEM_DIR="$CONFIG_DIR/items" # Directory where the items are configured
+ITEM_DIR="$CONFIG_DIR/items"     # Directory where the items are configured
 PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
 
-FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
-PADDINGS=3 # All paddings use this value (icon, label, background)
+FONT="JetBrainsMono Nerd Font Mono" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+LABEL_FONT="JetBrainsMono Nerd Font Mono"
+PADDINGS=3    # All paddings use this value (icon, label, background)
 
 # Setting up and starting the helper process
 HELPER=git.felix.helper
 killall helper
 (cd $CONFIG_DIR/helper && make)
-$CONFIG_DIR/helper/helper $HELPER > /dev/null 2>&1 &
+$CONFIG_DIR/helper/helper $HELPER >/dev/null 2>&1 &
 
 # Unload the macOS on screen indicator overlay for volume change
-launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist > /dev/null 2>&1 &
+launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/dev/null 2>&1 &
 
 # Setting up the general bar appearance of the bar
 bar=(
   height=45
-  color=$BAR_COLOR
-  border_width=2
   border_color=$BAR_BORDER_COLOR
   shadow=off
   position=top
@@ -39,21 +38,22 @@ sketchybar --bar "${bar[@]}"
 # Setting up default values
 defaults=(
   updates=when_shown
-  icon.font="$FONT:Bold:14.0"
+  icon.font="$FONT:Regular:12"
   icon.color=$ICON_COLOR
   icon.padding_left=$PADDINGS
   icon.padding_right=$PADDINGS
-  label.font="$FONT:Semibold:13.0"
+  label.font="$LABEL_FONT:Regular:9.0"
   label.color=$LABEL_COLOR
   label.padding_left=$PADDINGS
   label.padding_right=$PADDINGS
   padding_right=$PADDINGS
   padding_left=$PADDINGS
-  background.height=26
-  background.corner_radius=9
-  background.border_width=2
-  popup.background.border_width=2
-  popup.background.corner_radius=9
+  background.color=$TRANSPARENT
+  background.height=0
+  background.corner_radius=3
+  background.border_width=1
+  popup.background.border_width=1
+  popup.background.corner_radius=3
   popup.background.border_color=$POPUP_BORDER_COLOR
   popup.background.color=$POPUP_BACKGROUND_COLOR
   popup.blur_radius=20
@@ -75,15 +75,18 @@ source "$ITEM_DIR/spotify.sh"
 
 # Right
 source "$ITEM_DIR/calendar.sh"
+# for eth.sh to work, you need to have ETH_API_KEY set in your env.local.sh,
+# see env.local.sh.example
 source "$ITEM_DIR/brew.sh"
 source "$ITEM_DIR/github.sh"
+source "$ITEM_DIR/eth.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/cpu.sh"
 # FIXME: sometimes widget stops working, shows only 1B/s
 # source "$ITEM_DIR/network.sh"
-source "$ITEM_DIR/svim.sh"
+# source "$ITEM_DIR/svim.sh"
 
 sketchybar --hotload on
 

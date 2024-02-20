@@ -2,13 +2,13 @@
 
 update() {
   source "$CONFIG_DIR/colors.sh"
-  COLOR=$GREY
+  COLOR=$TRANSPARENT
   if [ "$SELECTED" = "true" ]; then
     COLOR=$BACKGROUND_2
   fi
   sketchybar --set $NAME icon.highlight=$SELECTED \
-                         label.highlight=$SELECTED \
-                         background.border_color=$COLOR
+    label.highlight=$SELECTED \
+    background.border_color=$COLOR
 }
 
 set_space_label() {
@@ -35,8 +35,10 @@ mouse_clicked() {
 }
 
 case "$SENDER" in
-  "mouse.clicked") mouse_clicked
+"mouse.clicked")
+  mouse_clicked
   ;;
-  *) update
+*)
+  update
   ;;
 esac

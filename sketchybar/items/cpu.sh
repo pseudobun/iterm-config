@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cpu_top=(
-  label.font="$FONT:Semibold:7"
+  label.font="$FONT:Regular:7"
   label=CPU
   icon.drawing=off
   width=0
@@ -10,7 +10,7 @@ cpu_top=(
 )
 
 cpu_percent=(
-  label.font="$FONT:Heavy:12"
+  label.font="$FONT:Regular:12"
   label=CPU
   y_offset=-4
   padding_right=15
