@@ -3,7 +3,7 @@
 eth_icon=(
     popup.horizontal=on
     padding_right=6
-    update_freq=900
+    update_freq=60
     icon=$ETH
     label=?
     icon.font="$FONT:Regular:15.0"
