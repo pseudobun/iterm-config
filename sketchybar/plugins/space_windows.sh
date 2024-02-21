@@ -12,8 +12,6 @@ if [ "$SENDER" = "space_windows_change" ]; then
     do
       icon_strip+=" $($CONFIG_DIR/plugins/icon_map.sh "$app")"
     done <<< "${apps}"
-  else
-    icon_strip=" —"
   fi
   args+=(--set space.$space label="$icon_strip")
 
