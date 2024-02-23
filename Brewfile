@@ -187,6 +187,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "wireshark"
 cask "yubico-authenticator"
+cask "zed"
 mas "DaisyDisk", id: 411643860
 mas "Dropover", id: 1355679052
 mas "Magnet", id: 441258766
@@ -196,7 +197,6 @@ mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
-mas "Yubico Authenticator", id: 1497506650
 vscode "bmalehorn.vscode-fish"
 vscode "bradlc.vscode-tailwindcss"
 vscode "chakrounanas.turbo-console-log"
