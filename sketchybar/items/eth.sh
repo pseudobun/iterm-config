@@ -28,4 +28,5 @@ sketchybar --add event eth.update \
     --subscribe eth.icon mouse.entered \
     mouse.exited \
     mouse.exited.global \
+    system_woke \
     eth.update

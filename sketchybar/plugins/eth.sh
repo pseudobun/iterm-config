@@ -30,8 +30,11 @@ popup() {
 }
 
 case "$SENDER" in
-"routine" | "forced" | "github.update")
+"routine" | "forced")
     update
+    ;;
+"system_woke")
+    sleep 10 && update # Wait for network to connect
     ;;
 "mouse.entered")
     popup on
