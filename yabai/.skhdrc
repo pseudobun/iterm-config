@@ -1,3 +1,6 @@
+# Open apps shortcuts
+hyper - 0x18 : open -a "Alacritty"
+
 # LAYOUTS
 hyper - w : yabai -m space --layout bsp; sketchybar --trigger window_focus
 hyper - s : yabai -m space --layout stack; sketchybar --trigger window_focus
