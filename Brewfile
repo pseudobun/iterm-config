@@ -5,6 +5,7 @@ tap "he3-app/he3"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
+tap "infisical/get-cli"
 tap "koekeishiya/formulae"
 tap "mongodb/brew"
 tap "ngrok/ngrok"
@@ -125,6 +126,7 @@ brew "zoxide"
 brew "bufbuild/buf/buf"
 brew "felixkratz/formulae/borders"
 brew "felixkratz/formulae/sketchybar"
+brew "infisical/get-cli/infisical"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 brew "mongodb/brew/mongodb-community"
@@ -201,6 +203,7 @@ mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
+vscode "biomejs.biome"
 vscode "bmalehorn.vscode-fish"
 vscode "bradlc.vscode-tailwindcss"
 vscode "chakrounanas.turbo-console-log"
