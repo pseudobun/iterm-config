@@ -16,6 +16,8 @@ yabai -m rule --add app="^Google Chrome$" title="Google Chrome" manage=on
 yabai -m rule --add app="^Brave Browser$" manage=off
 yabai -m rule --add app="^Brave Browser$" title="Brave" manage=on
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
+yabai -m rule --add app="^Spotify$" scratchpad=spotify grid=11:11:1:1:9:9
+yabai -m rule --add app="^Discord$" title!="^Discord Updater$" scratchpad=discord grid=11:11:1:1:9:9
 
 # Signals
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"

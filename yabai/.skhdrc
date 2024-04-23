@@ -108,6 +108,14 @@ cmd + ralt - 8 : yabai -m window --space 8; yabai -m space --focus 8;
 cmd + ralt - 9 : yabai -m window --space 9; yabai -m space --focus 9;
 cmd + ralt - 0 : yabai -m window --space 10; yabai -m space --focus 10;
 
+# show all scratchpad windows if inaccessible due to yabai restart or crash
+cmd + alt - r : yabai -m window --scratchpad recover
+
+# toggle s
+# toggle scratchpad windows or launch application if not running
+cmd + alt - s : yabai -m window --toggle spotify || open  -a Spotify
+cmd + alt - d : yabai -m window --toggle discord || open -a Discord
+
 # Toggle fullscreen current focused window
 ctrl + alt - return :  yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
 
