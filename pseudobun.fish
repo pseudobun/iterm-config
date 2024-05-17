@@ -16,6 +16,7 @@ alias watchtsm="watch --interval 1 'transmission-remote -l'"
 # pyenv init - | source
 zoxide init fish | source
 starship init fish | source
+fzf --fish | source
 
 # base abbrs
 abbr -a htop 'btm'
