@@ -123,6 +123,11 @@ install_rust() {
     echo "Finished installing Rust."
 }
 
+install_asdf() {
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+    mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+}
+
 install_bun() {
     echo "Installing Bun..."
     curl -fsSL https://bun.sh/install | bash
