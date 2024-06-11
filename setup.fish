@@ -9,3 +9,4 @@ fish_add_path $PYENV_ROOT/bin
 fish_add_path /opt/homebrew/opt/postgresql@15/bin
 fish_add_path ~/.cargo/bin
 echo "Finished pyenv setup."
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher

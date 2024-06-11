@@ -71,6 +71,14 @@ install_omf() {
     echo "Finished installing omf."
 }
 
+install_fisher() {
+    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+}
+
+install_fisher_plugins() {
+    fisher install g-plane/pnpm-shell-completion
+}
+
 install_foundry() {
     echo "Installing Foundry..."
     curl -L https://foundry.paradigm.xyz | bash
@@ -183,6 +191,8 @@ main() {
     manage_homebrew
     set_fish_shell
     install_omf
+    install_fisher
+    install_fisher_plugins
     setup_nvm
     setup_gpg
     symlink_dotfiles
