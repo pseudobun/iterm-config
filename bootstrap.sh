@@ -85,14 +85,6 @@ install_foundry() {
     echo "Finished installing Foundry."
 }
 
-setup_nvm() {
-    nvm_url="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh"
-    echo "Install NVM from (default: $nvm_url): "
-    read -r nvm_alt_url
-    [ -n "$nvm_alt_url" ] && nvm_url=$nvm_alt_url
-    curl -o- $nvm_url | bash
-}
-
 symlink_dotfiles() {
     echo "Symlinking dotfiles..."
     ln -fs $dotfiles_path/.gitconfig ~/.gitconfig
@@ -193,7 +185,6 @@ main() {
     install_omf
     install_fisher
     install_fisher_plugins
-    setup_nvm
     setup_gpg
     symlink_dotfiles
     fish ./setup.fish

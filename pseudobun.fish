@@ -5,7 +5,6 @@ set --export GPG_TTY $(tty)
 
 eval (/opt/homebrew/bin/brew shellenv)
 fish_add_path ~/.cargo/bin/
-load_nvm > /dev/stderr
 
 kubectl completion fish | source
 alias please='sudo'
@@ -67,3 +66,4 @@ function brew
  end
 
 source ~/.asdf/asdf.fish
+fnm env --use-on-cd --version-file-strategy=recursive | source
