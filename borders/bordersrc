@@ -6,7 +6,7 @@ options=(
     hidpi=off
     active_color=0xff969696
     inactive_color=0xff414550
-    blacklist="iTerm2"
+    blacklist="iTerm2,Screen Studio"
 )
 
 borders "${options[@]}"
