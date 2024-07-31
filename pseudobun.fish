@@ -21,7 +21,7 @@ fzf --fish | source
 abbr -a htop 'btm'
 abbr -a top 'btm'
 abbr -a cd 'z'
-abbr -a l 'exa -ahliH --icons'
+abbr -a l 'eza -ahliH --icons'
 abbr -a k 'kubectl'
 
 # git abbrs
@@ -51,7 +51,7 @@ abbr -a grp 'git remote prune origin'
 
 function cs
    z $argv
-   exa -ahliH --icons
+   eza -ahliH --icons
 end
 
 function md
