@@ -51,7 +51,7 @@ abbr -a grp 'git remote prune origin'
 
 function cs
    z $argv
-   eza -ahliH --icons
+   eza --icons -ahliH
 end
 
 function md
