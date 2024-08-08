@@ -4,14 +4,15 @@ update() {
   IS_VPN=$(scutil --nwi | grep -m1 'utun' | awk '{ print $1 }')
   IP_ADDRESS=$(scutil --nwi | grep address | sed 's/.*://' | tr -d ' ' | head -1)
   source "$CONFIG_DIR/icons.sh"
-  INFO="$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F ' SSID: '  '/ SSID: / {print $2}')"
-  LABEL="$INFO $IP_ADDRESS"
+  # airport cli is deprecated
+  # INFO="$(/System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -I | awk -F ' SSID: '  '/ SSID: / {print $2}')"
+  LABEL="$IP_ADDRESS"
   COLOR="$BACKGROUND_1"
   if [[ "$IS_VPN" != "" ]]; then
     COLOR=$CYAN
     ICON="$VPN"
     LABEL="VPN"
-  elif [ -n "$INFO" ]; then
+  elif [ -n "$IP_ADDRESS" ]; then
     ICON="$WIFI_CONNECTED"
     animate_close
   else
@@ -51,8 +52,10 @@ click() {
 }
 
 case "$SENDER" in
-  "wifi_change") update
+"wifi_change")
+  update
   ;;
-  "mouse.clicked") click
+"mouse.clicked")
+  click
   ;;
 esac
