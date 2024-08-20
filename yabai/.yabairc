@@ -10,7 +10,7 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 # Rules
-yabai -m rule --add app="^(iTerm2|He3|System Settings|Parallels Desktop|KeePassXC)\$" manage=off sub-layer=below
+yabai -m rule --add app="^(iTerm2|He3|System Settings|Parallels Desktop)\$" manage=off sub-layer=below
 yabai -m rule --add app="^Google Chrome$" manage=off
 yabai -m rule --add app="^Google Chrome$" title="Google Chrome" manage=on
 yabai -m rule --add app="^Brave Browser$" manage=off
@@ -40,8 +40,8 @@ yabai -m config \
     auto_balance off \
     top_padding 2 \
     bottom_padding 2 \
-    left_padding 2 \
-    right_padding 2 \
+    left_padding 24 \
+    right_padding 24 \
     window_gap 10 \
     layout stack \
     mouse_modifier fn \

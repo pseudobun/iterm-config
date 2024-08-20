@@ -97,6 +97,8 @@ symlink_dotfiles() {
     [ -d "~/.config/sketchybar/plugins" ] || mkdir -p ~/.config/sketchybar/plugins
     [ -d "~/.config/sketchybar/items" ] || mkdir -p ~/.config/sketchybar/items
     [ -d "~/.config/sketchybar/helper" ] || mkdir -p ~/.config/sketchybar/helper
+    [ -d "~/.hammerspoon" ] || mkdir -p ~/.hammerspoon
+    ln -fs $dotfiles_path/.hammerspoon/ ~/.hammerspoon
     ln -fs $dotfiles_path/sketchybar/sketchybarrc ~/.config/sketchybar/sketchybarrc
     ln -fs $dotfiles_path/sketchybar/colors.sh ~/.config/sketchybar/colors.sh
     ln -fs $dotfiles_path/sketchybar/icons.sh ~/.config/sketchybar/icons.sh
@@ -125,7 +127,8 @@ install_rust() {
 
 install_asdf() {
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
-    mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+    mkdir -p ~/.config/fish/completions
+    and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 }
 
 install_bun() {
