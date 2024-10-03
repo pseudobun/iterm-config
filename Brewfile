@@ -220,6 +220,7 @@ mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
+vscode "74th.monokai-charcoal-high-contrast"
 vscode "biomejs.biome"
 vscode "bmalehorn.vscode-fish"
 vscode "bradlc.vscode-tailwindcss"
@@ -230,6 +231,7 @@ vscode "dbaeumer.vscode-eslint"
 vscode "digitalbrainstem.javascript-ejs-support"
 vscode "docsmsft.docs-markdown"
 vscode "docsmsft.docs-preview"
+vscode "dracula-theme-pro.theme-dracula-pro"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "folke.vscode-monorepo-workspace"
