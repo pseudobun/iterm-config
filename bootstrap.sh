@@ -131,6 +131,12 @@ install_asdf() {
     and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 }
 
+install_deno() {
+    echo "Installing Deno..."
+    curl -fsSL https://deno.land/install.sh | sh
+    echo "Finished installing Deno."
+}
+
 install_bun() {
     echo "Installing Bun..."
     curl -fsSL https://bun.sh/install | bash
