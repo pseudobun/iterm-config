@@ -23,6 +23,7 @@ abbr -a top 'btm'
 abbr -a cd 'z'
 abbr -a l 'eza --icons -ahliH'
 abbr -a k 'kubectl'
+abbr -a code 'cursor'
 
 # git abbrs
 abbr -a ga 'git add'
