@@ -92,6 +92,9 @@ case "$1" in
 "Jellyfin Media Player")
   icon_result=":jellyfin:"
   ;;
+"Cursor")
+  icon_result=":cursor:"
+  ;;
 "Element")
   icon_result=":element:"
   ;;
