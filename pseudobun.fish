@@ -18,12 +18,12 @@ starship init fish | source
 fzf --fish | source
 
 # base abbrs
-abbr -a htop 'btm'
-abbr -a top 'btm'
-abbr -a cd 'z'
+abbr -a htop btm
+abbr -a top btm
+abbr -a cd z
 abbr -a l 'eza --icons -ahliH'
-abbr -a k 'kubectl'
-abbr -a code 'cursor'
+abbr -a k kubectl
+abbr -a code cursor
 
 # git abbrs
 abbr -a ga 'git add'
@@ -49,22 +49,23 @@ abbr -a zeus 'ssh root@zeus'
 abbr -a minsky 'ssh root@minsky'
 
 abbr -a grp 'git remote prune origin'
+abbr -a grb "git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 
 function cs
-   z $argv
-   eza --icons -ahliH
+    z $argv
+    eza --icons -ahliH
 end
 
 function md
-   markdown $argv[1] | lynx -stdin
+    markdown $argv[1] | lynx -stdin
 end
 
 function brew
-   command brew $argv
-   if contains "upgrade" $argv; or contains "update" $argv; or contains "outdated" $argv
-     sketchybar --trigger brew_update
-   end
- end
+    command brew $argv
+    if contains upgrade $argv; or contains update $argv; or contains outdated $argv
+        sketchybar --trigger brew_update
+    end
+end
 
 source ~/.asdf/asdf.fish
 fnm env --use-on-cd --version-file-strategy=recursive | source
