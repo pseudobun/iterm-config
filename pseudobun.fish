@@ -49,7 +49,7 @@ abbr -a zeus 'ssh root@zeus'
 abbr -a minsky 'ssh root@minsky'
 
 abbr -a grp 'git remote prune origin'
-abbr -a grb "git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
+abbr -a grb "git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs git branch -D"
 
 function cs
     z $argv
