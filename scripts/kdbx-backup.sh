@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "/Users/pseudobun/Library/CloudStorage/GoogleDrive-uvidovic98@gmail.com/My Drive/1-personal/1-kdbxs/kdbxs"
+cd "/Users/pseudobun/GDrive/1-personal/1-kdbxs/kdbxs"
 touch test.txt
 git add --all
 git commit -aS -m "chore: backup $(date +"%d-%m-%Y %H:%M:%S")"
