@@ -176,6 +176,7 @@ cask "karabiner-elements"
 cask "keepassxc"
 cask "lapce"
 cask "ledger-live"
+cask "libreoffice"
 cask "logi-options+"
 cask "macfuse"
 cask "mamp"
@@ -203,6 +204,7 @@ cask "stats"
 cask "steam"
 cask "sublime-text"
 cask "superkey"
+cask "sweet-home3d"
 cask "tableplus"
 cask "telegram"
 cask "ticktick"
@@ -215,6 +217,7 @@ cask "zed"
 mas "DaisyDisk", id: 411643860
 mas "Dropover", id: 1355679052
 mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
 mas "Raivo OTP", id: 1498497896
 mas "Reeder", id: 1529448980
 mas "Telegram", id: 747648890
