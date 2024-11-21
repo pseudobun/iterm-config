@@ -22,10 +22,10 @@ ctrl + alt - up : yabai -m window --swap north   || $(yabai -m window --display 
 ctrl + alt - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east);
 
 # MOVE SOURCE WINDOW TO TARGET WINDOW IN STACK
-cmd + ctrl - left  : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
-cmd + ctrl - down  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
-cmd + ctrl - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
-cmd + ctrl - right : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + shift - left  : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + shift - down  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + shift - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + shift - right : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
 
 cmd + shift + ctrl - left  : yabai -m window --warp west
 cmd + shift + ctrl - down  : yabai -m window --warp south
