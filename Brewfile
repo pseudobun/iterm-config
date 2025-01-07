@@ -10,6 +10,7 @@ tap "infisical/get-cli"
 tap "koekeishiya/formulae"
 tap "mongodb/brew"
 tap "ngrok/ngrok"
+tap "nikitabobko/tap"
 tap "shaunsingh/sfmono-nerd-font-ligaturized"
 tap "spicetify/tap"
 tap "supabase/tap"
@@ -142,6 +143,7 @@ brew "supabase/tap/supabase"
 brew "teamookla/speedtest/speedtest"
 cask "adobe-acrobat-reader"
 cask "adobe-creative-cloud"
+cask "aerospace"
 cask "alacritty"
 cask "aldente"
 cask "appcleaner"
@@ -219,6 +221,7 @@ cask "yubico-authenticator"
 cask "zed"
 mas "DaisyDisk", id: 411643860
 mas "Dropover", id: 1355679052
+mas "Infuse", id: 1136220934
 mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Raivo OTP", id: 1498497896
